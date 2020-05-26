@@ -181,6 +181,8 @@ Error message and password prompt
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/plugins/tiddlywiki/xlsx-utils</li>
 
+<li>$:/state/tab--219645345</li>
+
 <li>$:/state/tab-1163638994</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -398,6 +400,10 @@ Error message and password prompt
 <li>$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html</li>
 
 <li>$:/theme</li>
+
+<li>$:/themes/tiddlywiki/centralised</li>
+
+<li>$:/themes/tiddlywiki/heavier</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
@@ -9887,6 +9893,9 @@ Error message and password prompt
 <div created="20200526003746722" modified="20200526003754799" title="$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/plugins/tiddlywiki/xlsx-utils">
 <pre>no</pre>
 </div>
+<div created="20200526010008669" modified="20200526010009282" title="$:/state/tab--219645345">
+<pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
+</div>
 <div created="20200526003727950" modified="20200526003730271" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Plugins</pre>
 </div>
@@ -9905,7 +9914,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="About MarioSiqueira" title="$:/StoryList">
+<div created="20200526010004265" list="$:/ControlPanel About MarioSiqueira" modified="20200526010004265" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10913,11 +10922,33 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20200526003737202" dependents="" description="Basic theme" modified="20200526003737202" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" plugin-priority="0" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
 </div>
-<div created="20200526003737176" modified="20200526003737176" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
+<div created="20200526010011511" modified="20200526010011511" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
 <div created="20200526005908101" modified="20200526005908101" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
+</div>
+<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/snowwhite" description="Centralises the story river" name="Centralised" plugin-type="theme" title="$:/themes/tiddlywiki/centralised" type="application/json" version="5.1.22">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/themes/tiddlywiki/centralised/styles.tid&quot;: {
+            &quot;title&quot;: &quot;$:/themes/tiddlywiki/centralised/styles.tid&quot;,
+            &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n\thtml .tc-page-container {\n\t\ttext-align: center;\n\t}\n\n\thtml .tc-story-river {\n\t\tposition: relative;\n\t\twidth: 770px;\n\t\tpadding: 42px;\n\t\tmargin: 0 auto;\n\t\ttext-align: left;\n\t}\n\n\thtml .tc-sidebar-scrollable {\n\t\ttext-align: left;\n\t\tleft: 50%;\n\t\tright: 0;\n\t\tmargin-left: 343px;\n\t}\n}\n&quot;
+        }
+    }
+}</pre>
+</div>
+<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/snowwhite" description="Heavier font theme" name="Heavier" plugin-type="theme" title="$:/themes/tiddlywiki/heavier" type="application/json" version="5.1.22">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/themes/tiddlywiki/heavier/base&quot;: {
+            &quot;title&quot;: &quot;$:/themes/tiddlywiki/heavier/base&quot;,
+            &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\nhtml body strong,\nhtml body button.tc-tiddlylink,\nhtml body a.tc-tiddlylink,\nhtml body a.tc-tiddlylink-shadow,\nhtml body .tc-menu-list-count {\n\tfont-weight: 700;\n}\n\nhtml body h1,\nhtml body h2,\nhtml body h3,\nhtml body h4,\nhtml body h5,\nhtml body h6,\nhtml body a.tc-tiddlylink-shadow.tc-tiddlylink-resolves,\nhtml body button.tc-tag-label,\nhtml body span.tc-tag-label,\nhtml body .tc-sidebar-header .tc-title a.tc-tiddlylink-resolves,\nhtml body .tc-site-title,\nhtml body .tc-titlebar,\nhtml body .tc-subtitle,\nhtml body .tc-tiddler-missing .tc-title,\nhtml body .tc-tab-buttons button,\nhtml body .tc-tiddler-frame .tc-tiddler-body {\n\tfont-weight: 500;\n}\n\nhtml body .tc-view-field-name {\n\tfont-weight: 400;\n}\n&quot;
+        }
+    }
+}</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22">
 <pre>{
