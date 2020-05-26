@@ -185,8 +185,6 @@ Error message and password prompt
 
 <li>$:/plugins/tiddlywiki/d3</li>
 
-<li>$:/plugins/tiddlywiki/stacked-view</li>
-
 <li>$:/SiteTitle</li>
 
 <li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/plugins/tiddlywiki/cecily</li>
@@ -9995,42 +9993,6 @@ display:block;
     }
 }</pre>
 </div>
-<div dependents="" description="Stacked card storyview" list="readme" name="Stacked View" plugin-type="plugin" title="$:/plugins/tiddlywiki/stacked-view" type="application/json" version="5.1.22">
-<pre>{
-    &quot;tiddlers&quot;: {
-        &quot;$:/plugins/tiddlywiki/stacked-view/StackedControls&quot;: {
-            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/stacked-view/StackedControls&quot;,
-            &quot;caption&quot;: &quot;Stacked View&quot;,
-            &quot;tags&quot;: &quot;$:/tags/SideBar&quot;,
-            &quot;text&quot;: &quot;Set the [[fan separation|$:/config/StackedStoryViewFanHeight]]:\n\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;-10\&quot;&gt;-10&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;0\&quot;&gt;0&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;10\&quot;&gt;10&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;30\&quot;&gt;30&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;50\&quot;&gt;50&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;100\&quot;&gt;100&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;150\&quot;&gt;150&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;200\&quot;&gt;200&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;250\&quot;&gt;250&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;300\&quot;&gt;300&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;500\&quot;&gt;500&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;700\&quot;&gt;700&lt;/$button&gt;\n* &lt;$button set=\&quot;$:/config/StackedStoryViewFanHeight\&quot; setTo=\&quot;1500\&quot;&gt;1500&lt;/$button&gt;\n&quot;
-        },
-        &quot;$:/config/StackedStoryViewFanHeight&quot;: {
-            &quot;title&quot;: &quot;$:/config/StackedStoryViewFanHeight&quot;,
-            &quot;text&quot;: &quot;100&quot;
-        },
-        &quot;$:/plugins/tiddlywiki/stacked-view/readme&quot;: {
-            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/stacked-view/readme&quot;,
-            &quot;text&quot;: &quot;This plugin provides a new story visualisation that displays individual tiddlers as a stack of cards. It is currently experimental and incomplete.\n\n[[Source code|https://github.com/Jermolene/TiddlyWiki5/blob/master/plugins/tiddlywiki/stacked-view]]\n&quot;
-        },
-        &quot;$:/plugins/tiddlywiki/stacked-view/config-macros/stacked-storyview&quot;: {
-            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/stacked-view/config-macros/stacked-storyview&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
-            &quot;text&quot;: &quot;\\define tv-stacked-storyview-fan-height-config-title() $:/config/StackedStoryViewFanHeight\n&quot;
-        },
-        &quot;$:/plugins/tiddlywiki/stacked-view/stacked.js&quot;: {
-            &quot;title&quot;: &quot;$:/plugins/tiddlywiki/stacked-view/stacked.js&quot;,
-            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/tiddlywiki/stacked-view/stacked.js\ntype: application/javascript\nmodule-type: storyview\n\nKeeps tiddlers in a stack\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\nvar easing = \&quot;cubic-bezier(0.645, 0.045, 0.355, 1)\&quot;; // From http://easings.net/#easeInOutCubic\n\nvar StackedListView = function(listWidget) {\n\tvar self = this;\n\tthis.listWidget = listWidget;\n\tthis.fanHeightConfigTitle = listWidget.getVariable(\&quot;tv-stacked-storyview-fan-height-config-title\&quot;);\n\tthis.placeTiddlers();\n};\n\nStackedListView.prototype.placeTiddlers = function() {\n\t// Initialise the stack of tiddler titles\n\tthis.listStack = [];\n\tvar numItems = this.listWidget.children.length,\n\t\tt, itemWidget,\n\t\tduration = $tw.utils.getAnimationDuration();\n\tfor(t=numItems-1; t&gt;=0; t--) {\n\t\titemWidget = this.listWidget.children[t];\n\t\tthis.listStack.push(itemWidget.parseTreeNode.itemTitle);\n\t}\n\t// Ensure the tiddler at the top of the history stack is at the top of the array\n\tvar history = this.listWidget.wiki.getTiddlerData(this.listWidget.historyTitle,[]);\n\tfor(t=0; t&lt;history.length; t++) {\n\t\tvar title = history[t].title;\n\t\tif(this.listStack.indexOf(title) !== -1) {\n\t\t\t$tw.utils.pushTop(this.listStack,title);\n\t\t}\n\t}\n\t// Get the configured fan height\n\tvar fanHeight = parseInt(this.listWidget.wiki.getTiddlerText(this.fanHeightConfigTitle),10);\n\t// Position each tiddler\n\tfor(var t=numItems-1; t&gt;=0; t--) {\n\t\t// Get the DOM node for this tiddler\n\t\titemWidget = this.listWidget.children[t];\n\t\tvar domNode = itemWidget.findFirstDomNode();\n\t\tif(domNode instanceof Element) {\n\t\t\t// Allows the width of the tiddler to be adjusted\n\t\t\t$tw.utils.addClass(domNode,\&quot;tc-storyview-zoomin-tiddler\&quot;);\n\t\t\t// Find the position of the tiddler in the stack\n\t\t\tvar pos = this.listStack.indexOf(itemWidget.parseTreeNode.itemTitle);\n\t\t\tif(pos !== -1) {\n\t\t\t\t// Style the tiddler to position it\n\t\t\t\tvar posFactor = pos/(numItems-1);\n\t\t\t\t$tw.utils.setStyle(domNode,[\n\t\t\t\t\t{position: \&quot;absolute\&quot;},\n\t\t\t\t\t{transformOrigin: \&quot;50% 0\&quot;},\n\t\t\t\t\t{transition: $tw.utils.roundTripPropertyName(\&quot;transform\&quot;) + \&quot; \&quot; + duration * (0.5 + posFactor) + \&quot;ms \&quot; + easing},\n\t\t\t\t\t{transform: \&quot;translateX(0px) translateY(\&quot; + (fanHeight * posFactor * posFactor) + \&quot;px) scale(\&quot; + (0.1 + posFactor * 0.9) + \&quot;)\&quot;},\n\t\t\t\t\t{zIndex: pos + \&quot;\&quot;}\n\t\t\t\t]);\n\t\t\t}\n\t\t}\n\t}\n};\n\nStackedListView.prototype.refreshStart = function(changedTiddlers,changedAttributes) {\n};\n\nStackedListView.prototype.refreshEnd = function(changedTiddlers,changedAttributes) {\n\tthis.placeTiddlers();\n};\n\nStackedListView.prototype.navigateTo = function(historyInfo) {\n};\n\nStackedListView.prototype.insert = function(widget) {\n};\n\nStackedListView.prototype.remove = function(widget) {\n\twidget.removeChildDomNodes();\n};\n\nexports.stacked = StackedListView;\n\n})();&quot;,
-            &quot;type&quot;: &quot;application/javascript&quot;,
-            &quot;module-type&quot;: &quot;storyview&quot;
-        },
-        &quot;$:/core/images/storyview-stacked&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/storyview-stacked&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-storyview-stack tc-image-button\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot; viewBox=\&quot;0 0 128 128\&quot;&gt;\n    &lt;g fill-rule=\&quot;evenodd\&quot;&gt;\n        &lt;path d=\&quot;M8.00697327,0 C3.58484404,0 0,3.59075293 0,8.00697327 L0,119.993027 C0,124.415156 3.59075293,128 8.00697327,128 L119.993027,128 C124.415156,128 128,124.409247 128,119.993027 L128,8.00697327 C128,3.58484404 124.409247,0 119.993027,0 L8.00697327,0 L8.00697327,0 Z M32,43 L32,37.3807213 C32,34.4040057 34.3875896,32 37.3328305,32 L45.5,32 L45.5,32 L84,32 L90.6671695,32 C93.6079301,32 96,34.409031 96,37.3807213 L96,43 L32,43 Z M30,48 L23.9992458,48 C19.5813843,48 16,51.578055 16,56.0085154 L16,103.991485 C16,108.414466 19.5881049,112 23.9992458,112 L104.000754,112 C108.418616,112 112,108.421945 112,103.991485 L112,56.0085154 C112,51.5855345 108.411895,48 104.000754,48 L98.5,48 L30,48 Z M80,27 L80,23.7529272 C80,22.2325275 78.803965,21 77.3335847,21 L50.6664153,21 C49.1937948,21 48,22.2299564 48,23.7529272 L48,27 L80,27 Z\&quot;&gt;&lt;/path&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;&quot;
-        }
-    }
-}</pre>
-</div>
 <div created="20200526003624067" modified="20200526003627433" title="$:/SiteTitle">
 <pre>Mario's ~TiddlyWiki</pre>
 </div>
@@ -10061,8 +10023,8 @@ display:block;
 <div created="20200526015129064" modified="20200526015129064" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200526010637808" modified="20200526184359181" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200526010637808" modified="20200526185058442" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200526015121200" modified="20200526015154561" title="$:/state/tab--1963855381">
 <pre>$:/themes/jd/Whitespace/config</pre>
@@ -10092,9 +10054,9 @@ display:block;
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
-<div created="20200526184400218" list="$:/ControlPanel $:/Import About MarioSiqueira" modified="20200526184400218" title="$:/StoryList">
+<div created="20200526185030440" list="$:/ControlPanel About MarioSiqueira" modified="20200526185034727" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200526011302741" modified="20200526011312941" title="$:/temp/advancedsearch">
@@ -10113,19 +10075,19 @@ display:block;
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/msiqueira/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;https://seekr.github.io/zettel/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;seekr.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;seekr.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -10133,7 +10095,7 @@ display:block;
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/msiqueira/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;/zettel/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -10141,7 +10103,7 @@ display:block;
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;https://seekr.github.io&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
