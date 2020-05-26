@@ -189,6 +189,8 @@ Error message and password prompt
 
 <li>$:/state/searchtab-1444756290</li>
 
+<li>$:/state/showeditpreview</li>
+
 <li>$:/state/sidebar</li>
 
 <li>$:/state/tab--219645345</li>
@@ -214,6 +216,8 @@ Error message and password prompt
 <li>$:/temp/advancedsearch</li>
 
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/NewTagName</li>
 
 <li>$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES</li>
 
@@ -438,6 +442,8 @@ Error message and password prompt
 <li>About</li>
 
 <li>MarioSiqueira</li>
+
+<li>Revert Last Git</li>
 
 </ul>
 </p>
@@ -9932,14 +9938,17 @@ Error message and password prompt
 <div created="20200526011307918" modified="20200526011311679" title="$:/state/searchtab-1444756290">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
+<div created="20200526013338656" modified="20200526013527643" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
 <div created="20200526010637808" modified="20200526011258084" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20200526010008669" modified="20200526010009282" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20200526010350630" modified="20200526010645023" title="$:/state/tab--86143343">
-<pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
+<div created="20200526010350630" modified="20200526013208197" title="$:/state/tab--86143343">
+<pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20200526003727950" modified="20200526010936323" title="$:/state/tab-1163638994">
 <pre>$:/core/ui/MoreSideBar/Plugins/Theme</pre>
@@ -9962,7 +9971,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200526011659342" list="About" modified="20200526011729217" title="$:/StoryList">
+<div created="20200526013201375" list="[[Revert Last Git]] $:/ControlPanel About MarioSiqueira" modified="20200526013201375" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200526011302741" modified="20200526011312941" title="$:/temp/advancedsearch">
@@ -10025,6 +10034,9 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20200526013436861" modified="20200526013436861" title="$:/temp/NewTagName">
+<pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200526003737202" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200526003737202" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
@@ -11445,6 +11457,14 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 </div>
 <div created="20200526005712717" modified="20200526005727009" title="MarioSiqueira">
 <pre>MarioSiqueira is a designer based in Buenos Aires, Argentina.</pre>
+</div>
+<div created="20200526013259768" modified="20200526013742095" tags="git" title="Revert Last Git">
+<pre>```
+git reset --hard HEAD~
+git push -f
+```
+
+from [[stackoverflow|https://stackoverflow.com/questions/19826574/how-can-i-revert-a-push-to-repository-in-github]]</pre>
 </div>
 
 
