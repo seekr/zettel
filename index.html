@@ -146,6 +146,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/core/ui/EditorToolbar/heading-1</li>
+
 <li>$:/core/ui/SideBarSegments/search</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -199,6 +201,8 @@ Error message and password prompt
 <li>$:/state/plugin-info-749868030-$:/plugins/rmnvsl/krystal---432838930</li>
 
 <li>$:/state/ShowPaletteEditor</li>
+
+<li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1963855381</li>
 
@@ -9540,6 +9544,15 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div button-classes="tc-text-editor-toolbar-item-start-group" caption="{{$:/language/Buttons/Heading1/Caption}}" condition="[&lt;targetTiddler&gt;!has[type]] [&lt;targetTiddler&gt;type[text/vnd.tiddlywiki]]" created="20200604004444120" description="{{$:/language/Buttons/Heading1/Hint}}" modified="20200604004506762" shortcuts="((heading-1))" tags="$:/tags/EditorToolbar" title="$:/core/ui/EditorToolbar/heading-1">
+<pre>&lt;$action-sendmessage
+	$message=&quot;tm-edit-text-operation&quot;
+	$param=&quot;prefix-lines&quot;
+	character=&quot;!&quot;
+	count=&quot;1&quot;
+/&gt;
+</pre>
+</div>
 <div created="20200602002111013" modified="20200602002145400" tags="$:/tags/SideBarSegment $:/plugins/rmnvsl/krystal/header" title="$:/core/ui/SideBarSegments/search" type="text/vnd.tiddlywiki">
 <pre>\whitespace trim
 &lt;div class=&quot;tc-sidebar-lists tc-sidebar-search&quot;&gt;
@@ -9618,8 +9631,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20200531222323676" modified="20200531222414289" title="$:/palette">
-<pre>$:/palettes/SolarFlare</pre>
+<div created="20200531222323676" modified="20200603201433108" title="$:/palette">
+<pre>$:/palettes/Vanilla</pre>
 </div>
 <div created="20200601234055687" description="Warm, relaxing earth colours" modified="20200601234108150" name="Solar Flare" tags="$:/tags/Palette" title="$:/palettes/SolarFlare" type="application/x-tiddler-dictionary">
 <pre>base03: #002b36
@@ -10681,7 +10694,7 @@ very-muted-foreground: #888888</pre>
     }
 }</pre>
 </div>
-<div created="20200601234440549" modified="20200601234502505" tags="$:/tags/Stylesheet" title="$:/plugins/rmnvsl/krystal/header.css">
+<div created="20200601234440549" modified="20200604003918582" tags="$:/tags/Stylesheet" title="$:/plugins/rmnvsl/krystal/header.css">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
 .krystal-header {
@@ -10691,6 +10704,7 @@ very-muted-foreground: #888888</pre>
   position: relative;
   z-index: 10;
   text-align: center;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.125);
 }
 
 .krystal-header &gt; * {
@@ -10726,14 +10740,13 @@ very-muted-foreground: #888888</pre>
   }
 }</pre>
 </div>
-<div created="20200602002629185" modified="20200602002638278" tags="$:/tags/Stylesheet" title="$:/plugins/rmnvsl/krystal/river.css">
+<div created="20200602002629185" modified="20200604003739001" tags="$:/tags/Stylesheet" title="$:/plugins/rmnvsl/krystal/river.css">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
 
 .tc-tiddler-frame {
   border: none;
   border-bottom: 1px solid &lt;&lt;color page-background&gt;&gt;;
   border-radius: 0;
-  box-shadow: none;
   margin: 0;
   flex-shrink: 0;
   overflow-y: auto;
@@ -11054,6 +11067,9 @@ very-muted-foreground: #888888</pre>
 <div created="20200531222415765" modified="20200531222415766" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
+<div created="20200604003530764" modified="20200604004202389" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+</div>
 <div created="20200531221744372" modified="20200602002240141" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
@@ -11066,11 +11082,11 @@ very-muted-foreground: #888888</pre>
 <div created="20200527074400500" modified="20200601235000365" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/EditorTypes</pre>
 </div>
-<div created="20200527074318200" modified="20200602031908429" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20200527074318200" modified="20200603201422802" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20200531224656636" modified="20200602031907718" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/General</pre>
+<div created="20200531224656636" modified="20200603201424242" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20200531222437681" modified="20200603024323468" title="$:/state/tab/moresidebar-1645249547">
 <pre>$:/core/ui/MoreSideBar/Explorer</pre>
@@ -11084,8 +11100,8 @@ very-muted-foreground: #888888</pre>
 <div list="About" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20200601003131962" modified="20200603024629011" title="$:/temp/advancedsearch">
-<pre>optgroup</pre>
+<div created="20200601003131962" modified="20200604004725025" title="$:/temp/advancedsearch">
+<pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -11100,7 +11116,7 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///home/mashes/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;file:///Users/msiqueira/projects/zettel/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -11120,7 +11136,7 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/home/mashes/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;/Users/msiqueira/projects/zettel/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -11132,11 +11148,11 @@ very-muted-foreground: #888888</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1600&quot;
+            &quot;text&quot;: &quot;1680&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;1050&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -11145,11 +11161,11 @@ very-muted-foreground: #888888</pre>
     }
 }</pre>
 </div>
-<div created="20200531221913644" modified="20200531225544213" title="$:/temp/search">
+<div created="20200531221913644" modified="20200604004158100" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20200531222828924" modified="20200603025225515" title="$:/temp/tobibeer/preview-1-tiddler">
-<pre>Draft of '$:/themes/tiddlywiki/vanilla/base'</pre>
+<div created="20200531222828924" modified="20200604004603232" title="$:/temp/tobibeer/preview-1-tiddler">
+<pre>Draft of '$:/core/images/heading-6'</pre>
 </div>
 <div created="20200531222915841" modified="20200531222915841" title="$:/temp/tobibeer/preview-2-tiddler">
 <pre>About</pre>
@@ -11261,7 +11277,7 @@ very-muted-foreground: #888888</pre>
     }
 }</pre>
 </div>
-<div created="20200601004859927" modified="20200602011601781" tags="$:/tags/Stylesheet" title="$:/themes/tiddlywiki/vanilla/base">
+<div created="20200601004859927" modified="20200604003517501" tags="$:/tags/Stylesheet" title="$:/themes/tiddlywiki/vanilla/base">
 <pre>\define custom-background-datauri()
 &lt;$set name=&quot;background&quot; value={{$:/themes/tiddlywiki/vanilla/settings/backgroundimage}}&gt;
 &lt;$list filter=&quot;[&lt;background&gt;is[image]]&quot;&gt;
@@ -12156,6 +12172,7 @@ margin-right: .25em;
 	margin-bottom: 28px;
 	background-color: &lt;&lt;colour tiddler-background&gt;&gt;;
 	border: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.125); 
 }
 
 {{$:/themes/tiddlywiki/vanilla/sticky}}
