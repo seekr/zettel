@@ -191,11 +191,15 @@ Error message and password prompt
 
 <li>$:/config/EditorTypeMappings/text/vnd.tiddlywiki</li>
 
+<li>$:/config/jd/mobbutton/visibility/$:/plugins/jd/mobvsimp/button/search</li>
+
 <li>$:/config/Navigation/openLinkFromInsideRiver</li>
 
 <li>$:/config/NewJournal/Title</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/_sq/Stories/Templates/StoryTogglePageControl</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/advanced-search</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
@@ -285,6 +289,8 @@ Error message and password prompt
 
 <li>$:/plugins/jd/mobvsimp</li>
 
+<li>$:/plugins/jd/mobvsimp/config/config</li>
+
 <li>$:/plugins/snowgoon88/edit-comptext</li>
 
 <li>$:/plugins/snowgoon88/edit-comptext/config</li>
@@ -317,11 +323,11 @@ Error message and password prompt
 
 <li>$:/state/folded/Welcome to Stroll</li>
 
+<li>$:/state/jdmobbasic</li>
+
 <li>$:/state/plugin-info--1660586530-$:/plugins/sq/Stories</li>
 
 <li>$:/state/plugin-info--1660586530-$:/plugins/sq/Stories---1196877129</li>
-
-<li>$:/state/plugin-info--167012066-$:/themes/jd/Whitespace</li>
 
 <li>$:/state/plugin-info--1982238690-$:/plugins/snowgoon88/edit-comptext--1750175647</li>
 
@@ -394,6 +400,16 @@ Error message and password prompt
 <li>$:/temp/HidePluginWarning</li>
 
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/jd/mob/font/font-body</li>
+
+<li>$:/temp/jd/mob/font/font-button</li>
+
+<li>$:/temp/jd/mob/font/font-tab-button</li>
+
+<li>$:/temp/jd/mob/font/font-title</li>
+
+<li>$:/temp/jd/mob/font/lineheight</li>
 
 <li>$:/temp/NewTagName</li>
 
@@ -888,6 +904,9 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div bag="default" created="20191215203357897" modified="20200502181255154" revision="0" tags="stroll" title="$:/config/EditorTypeMappings/text/vnd.tiddlywiki" type="text/vnd.tiddlywiki">
 <pre>comptext</pre>
 </div>
+<div created="20200608024615317" modified="20200608024653545" title="$:/config/jd/mobbutton/visibility/$:/plugins/jd/mobvsimp/button/search">
+<pre>hide</pre>
+</div>
 <div created="20200418141615149" modified="20200502181307400" tags="stroll" title="$:/config/Navigation/openLinkFromInsideRiver">
 <pre>top</pre>
 </div>
@@ -896,6 +915,9 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 </div>
 <div bag="default" created="20200416201744386" modified="20200502181324302" revision="0" tags="stroll" title="$:/config/PageControlButtons/Visibility/$:/_sq/Stories/Templates/StoryTogglePageControl" type="text/vnd.tiddlywiki">
 <pre>show</pre>
+</div>
+<div created="20200608024644438" modified="20200608024653548" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/advanced-search">
+<pre>hide</pre>
 </div>
 <div created="20200502172232641" modified="20200502181339801" tags="stroll" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>reveal</pre>
@@ -10550,8 +10572,8 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 button.green-link {color:#00cc00;}
 </pre>
 </div>
-<div created="20200228210954683" modified="20200608010629038" tags="stroll" title="$:/palette">
-<pre>$:/palettes/SpartanDay</pre>
+<div created="20200228210954683" modified="20200608024718090" tags="stroll" title="$:/palette">
+<pre>$:/palettes/SolarFlare</pre>
 </div>
 <div bag="default" created="20200126141319129" modified="20200502181612604" revision="0" tags="$:/tags/Stylesheet stroll" title="$:/plugins/danielo515/context/css" type="text/css">
 <pre>.matched {background-color:#ffc;}
@@ -11633,6 +11655,12 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
+<div created="20171109145547252" creator="JD" modified="20200608024653550" modifier="JD" title="$:/plugins/jd/mobvsimp/config/config" type="application/x-tiddler-dictionary">
+<pre>fontsize: default
+searchbutton: none
+searchbar: yes
+searchbarchoice: combined</pre>
+</div>
 <div author="AlainD" bag="default" core-version="&gt;=5.1.13" created="20200304200257539" dependents="" description="Editor with some on-line completion capabilities" list="readme usage examples" modified="20200502175039997" plugin-type="plugin" revision="0" source="https://github.com/snowgoon88/TW5-extendedit" tags="stroll" title="$:/plugins/snowgoon88/edit-comptext" type="application/json" version="0.8.1">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -12158,14 +12186,14 @@ exports.context = contextWidget;
 <div created="20200503154024616" modified="20200503154205318" title="$:/state/folded/Welcome to Stroll">
 <pre>show</pre>
 </div>
+<div created="20200608024615315" modified="20200608024639151" title="$:/state/jdmobbasic">
+<pre>no</pre>
+</div>
 <div created="20200608011444175" modified="20200608011444175" title="$:/state/plugin-info--1660586530-$:/plugins/sq/Stories">
 <pre>no</pre>
 </div>
 <div created="20200504201055477" modified="20200504201055477" title="$:/state/plugin-info--1660586530-$:/plugins/sq/Stories---1196877129">
 <pre>contents</pre>
-</div>
-<div created="20200608024417704" modified="20200608024417705" title="$:/state/plugin-info--167012066-$:/themes/jd/Whitespace">
-<pre>no</pre>
 </div>
 <div created="20200504194742991" modified="20200504194742991" title="$:/state/plugin-info--1982238690-$:/plugins/snowgoon88/edit-comptext--1750175647">
 <pre>contents</pre>
@@ -12188,7 +12216,7 @@ exports.context = contextWidget;
 <div created="20200423200401447" modified="20200423210926655" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200418121802381" modified="20200608024452266" title="$:/state/sidebar">
+<div created="20200418121802381" modified="20200608024532255" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20200423135524613" modified="20200502164032606" title="$:/state/strollhometabs--312553599">
@@ -12200,8 +12228,8 @@ exports.context = contextWidget;
 <div created="20200418122550429" modified="20200504205519536" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
-<div created="20200418132348763" modified="20200608024403489" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Theme</pre>
+<div created="20200418132348763" modified="20200608024705981" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div created="20200429214724797" modified="20200429214724797" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
@@ -12209,8 +12237,8 @@ exports.context = contextWidget;
 <div created="20200423200357785" modified="20200423200357785" title="$:/state/tab--509593366">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
-<div created="20200429214732957" modified="20200608024227597" title="$:/state/tab--86143343">
-<pre>$:/core/ui/ControlPanel/Plugins/Installed/Themes</pre>
+<div created="20200429214732957" modified="20200608024728625" title="$:/state/tab--86143343">
+<pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20200423200356184" modified="20200423200356184" title="$:/state/tab-102244450">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
@@ -12218,8 +12246,8 @@ exports.context = contextWidget;
 <div created="20200418151636450" modified="20200421145858496" title="$:/state/tab-11433013">
 <pre>.topicList</pre>
 </div>
-<div created="20200418121928767" modified="20200608024400020" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200418121928767" modified="20200608024738415" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20200608011508148" modified="20200608011541268" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
@@ -12227,7 +12255,7 @@ exports.context = contextWidget;
 <div created="20200418122101344" modified="20200608010153706" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20200418121835270" modified="20200608024448671" title="$:/state/tab/sidebar--595412856">
+<div created="20200418121835270" modified="20200608024528277" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20200504200956301" modified="20200504201043124" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -12330,6 +12358,21 @@ exports.context = contextWidget;
     }
 }</pre>
 </div>
+<div created="20200608024601884" modified="20200608024611801" title="$:/temp/jd/mob/font/font-body">
+<pre></pre>
+</div>
+<div created="20200608024601888" modified="20200608024611803" title="$:/temp/jd/mob/font/font-button">
+<pre></pre>
+</div>
+<div created="20200608024601886" modified="20200608024611803" title="$:/temp/jd/mob/font/font-tab-button">
+<pre></pre>
+</div>
+<div created="20200608024601878" modified="20200608024611795" title="$:/temp/jd/mob/font/font-title">
+<pre></pre>
+</div>
+<div created="20200608024601886" modified="20200608024611802" title="$:/temp/jd/mob/font/lineheight">
+<pre></pre>
+</div>
 <div created="20200418122623650" modified="20200504150701999" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
@@ -12345,7 +12388,7 @@ exports.context = contextWidget;
 <div created="20200429214841632" modified="20200429214841632" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
 <pre>loaded</pre>
 </div>
-<div bag="default" created="20200414145220556" modified="20200608024426118" revision="0" title="$:/theme" type="text/vnd.tiddlywiki">
+<div bag="default" created="20200414145220556" modified="20200608024546036" revision="0" title="$:/theme" type="text/vnd.tiddlywiki">
 <pre>$:/themes/jd/Whitespace</pre>
 </div>
 <div author="jd" core-version="&gt;=5.1.17" dependents="$:/themes/tiddlywiki/vanilla" description="Lots of unused, negative space; an experiment on TW5 design" list="readme config" name="Whitespace" plugin-type="theme" title="$:/themes/jd/Whitespace" type="application/json" version="0.0.18">
