@@ -251,7 +251,17 @@ Error message and password prompt
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here</li>
 
+<li>$:/config/Whitespace/scrollbar-style</li>
+
 <li>$:/config/Whitespace/search</li>
+
+<li>$:/config/Whitespace/show-sitetitle</li>
+
+<li>$:/config/Whitespace/SidebarHeight</li>
+
+<li>$:/config/Whitespace/Spacious</li>
+
+<li>$:/config/Whitespace/ThemeEditFrame</li>
 
 <li>$:/ControlPanel 1</li>
 
@@ -471,6 +481,8 @@ Error message and password prompt
 
 <li>$:/themes/jd/Whitespace</li>
 
+<li>$:/themes/jd/Whitespace/config</li>
+
 <li>$:/themes/tiddlywiki/vanilla</li>
 
 <li>$:/themes/tiddlywiki/vanilla/metrics/storyleft</li>
@@ -525,7 +537,7 @@ Error message and password prompt
 <div bag="default" created="20170616192704225" modified="20200502181012015" revision="0" tags="stroll" title="$:/_sq/Stories/config/sidebaroverlaybreakpoint" type="text/vnd.tiddlywiki">
 <pre>1100px</pre>
 </div>
-<div created="20200502183010768" modified="20200504143203984" tags="stroll" title="$:/_sq/Stories/config/Story2-storyview">
+<div created="20200502183010768" modified="20200608195702239" tags="stroll" title="$:/_sq/Stories/config/Story2-storyview">
 <pre>classic</pre>
 </div>
 <div bag="default" created="20170615140314952" list="" modified="20200504143418079" revision="8" tags="stroll" title="$:/_sq/Stories/Story2StoryList" type="text/vnd.tiddlywiki">
@@ -1044,8 +1056,23 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20200504150240334" modified="20200608034501170" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here">
 <pre>hide</pre>
 </div>
+<div created="20200608195633086" modified="20200608195636968" title="$:/config/Whitespace/scrollbar-style">
+<pre>visible</pre>
+</div>
 <div created="20200608165243350" modified="20200608171836165" title="$:/config/Whitespace/search">
 <pre>no</pre>
+</div>
+<div created="20200608195629689" modified="20200608195631331" title="$:/config/Whitespace/show-sitetitle">
+<pre>no</pre>
+</div>
+<div created="20200608195637632" modified="20200608195641917" title="$:/config/Whitespace/SidebarHeight">
+<pre>full</pre>
+</div>
+<div created="20200608195620903" modified="20200608195628700" title="$:/config/Whitespace/Spacious">
+<pre>yes</pre>
+</div>
+<div created="20200608195617944" modified="20200608195618856" title="$:/config/Whitespace/ThemeEditFrame">
+<pre>yes</pre>
 </div>
 <div created="20200507132103667" modified="20200507132103667" title="$:/ControlPanel 1">
 <pre></pre>
@@ -12320,10 +12347,10 @@ searchbarchoice: combined</pre>
 <div created="20200429223357050" modified="20200429223357050" title="$:/state/SampleReveal2">
 <pre>show</pre>
 </div>
-<div created="20200423200401447" modified="20200423210926655" title="$:/state/ShowPaletteEditor">
-<pre>no</pre>
+<div created="20200423200401447" modified="20200608195547911" title="$:/state/ShowPaletteEditor">
+<pre>yes</pre>
 </div>
-<div created="20200418121802381" modified="20200608194915259" title="$:/state/sidebar">
+<div created="20200418121802381" modified="20200608195541005" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200423135524613" modified="20200502164032606" title="$:/state/strollhometabs--312553599">
@@ -12335,8 +12362,8 @@ searchbarchoice: combined</pre>
 <div created="20200418122550429" modified="20200608165517520" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20200418132348763" modified="20200608195155146" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20200418132348763" modified="20200608195853340" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/StoryView</pre>
 </div>
 <div created="20200429214724797" modified="20200429214724797" title="$:/state/tab--219645345">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
@@ -12356,11 +12383,11 @@ searchbarchoice: combined</pre>
 <div created="20200418151636450" modified="20200421145858496" title="$:/state/tab-11433013">
 <pre>.topicList</pre>
 </div>
-<div created="20200418121928767" modified="20200608195149183" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200418121928767" modified="20200608195922168" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20200608011508148" modified="20200608031848896" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/General</pre>
+<div created="20200608011508148" modified="20200608195910693" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20200418122101344" modified="20200608010153706" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
@@ -12392,7 +12419,7 @@ searchbarchoice: combined</pre>
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20200608194916014" list="about" modified="20200608195247920" title="$:/StoryList">
+<div created="20200608195506455" list="about" modified="20200608195906869" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200519141000553" list="$:/.giffmex/Buttons/more-tiddler-edit-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200521145647980" tags="$:/giffmex/bigeditarea $:/giffmex/stroll" title="$:/tags/EditToolbar">
@@ -12429,19 +12456,19 @@ searchbarchoice: combined</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/msiqueira/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;https://seekr.github.io/zettel/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;seekr.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;seekr.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -12449,7 +12476,7 @@ searchbarchoice: combined</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/msiqueira/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;/zettel/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -12457,7 +12484,7 @@ searchbarchoice: combined</pre>
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;https://seekr.github.io&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -12556,6 +12583,102 @@ searchbarchoice: combined</pre>
         }
     }
 }</pre>
+</div>
+<div caption="Whitespace tweaks" created="20171203134043686" creator="JD" modified="20200608195615941" modifier="jd" sidebar-position="left" tags="$:/tags/ControlPanel/Appearance" title="$:/themes/jd/Whitespace/config">
+<pre>\define wsconfig(name) $:/config/Whitespace/$name$
+\define config-base() $:/config/SideBar/Visibility/
+\define config-title-sidebar()
+$(config-base)$$(currentTiddler)$
+\end
+\define drop-actions()
+&lt;$action-listops $tiddler=&quot;$:/tags/SideBar&quot; $subfilter=&quot;+[insertbefore:currentTiddler&lt;actionTiddler&gt;]&quot;/&gt;
+\end
+
+&lt;style&gt;
+.tc-control-panel table input[type=&quot;radio&quot;] { width: auto; }
+.ws-select-button {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid &lt;&lt;colour primary&gt;&gt;;
+}
+.ws-disabled-btn {
+    background: &lt;&lt;colour muted-background&gt;&gt;;
+}
+.ws-enabled-btn {
+    background: &lt;&lt;colour primary&gt;&gt;;
+}
+&lt;/style&gt;
+
+&lt;table width=&quot;99%&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Sidebar width:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$edit-text tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth&quot; tag=&quot;input&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Tiddler width:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$edit-text tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth&quot; tag=&quot;input&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Limit sidebar card height:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig SidebarHeight&gt;&gt; field=&quot;text&quot; checked=&quot;limit&quot; unchecked=&quot;full&quot; default=&quot;limit&quot;/&gt;
+&lt;$list filter=&quot;[[$:/config/Whitespace/SidebarHeight]text[limit]]&quot;&gt;&lt;$edit-text tiddler=&lt;&lt;wsconfig SidebarHeight&gt;&gt; field=&quot;height&quot; tag=&quot;input&quot; placeholder=&quot;300px&quot;/&gt;&lt;/$list&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Visible scrollbars:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig scrollbar-style&gt;&gt; field=&quot;text&quot; checked=&quot;visible&quot; unchecked=&quot;invisible&quot; default=&quot;visible&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Show Sitetitle and Subtitle:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig show-sitetitle&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Show buttons on hover:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig Spacious&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Theme the tiddler edit mode:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig ThemeEditFrame&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Sidebar position:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$radio tiddler=&quot;$:/themes/jd/Whitespace/config&quot; field=&quot;sidebar-position&quot; value=&quot;left&quot;&gt; left&lt;/$radio&gt;&lt;br&gt;
+&lt;$radio tiddler=&quot;$:/themes/jd/Whitespace/config&quot; field=&quot;sidebar-position&quot; value=&quot;right&quot;&gt; right&lt;/$radio&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="Basic theme" name="Vanilla" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/vanilla" type="application/json" version="5.1.17">
 <pre>{
