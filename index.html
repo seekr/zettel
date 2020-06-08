@@ -267,6 +267,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/core/images/preview-open</li>
+
 <li>$:/core/modules/filters/has.js</li>
 
 <li>$:/core/ui/Buttons/fold</li>
@@ -361,6 +363,10 @@ Error message and password prompt
 
 <li>$:/state/plugin-info--896887961-$:/plugins/sq/Stories---1130285312</li>
 
+<li>$:/state/plugin-info-334910430-$:/core</li>
+
+<li>$:/state/plugin-info-334910430-$:/core---1812962263</li>
+
 <li>$:/state/refsection</li>
 
 <li>$:/state/SampleReveal1</li>
@@ -386,6 +392,8 @@ Error message and password prompt
 <li>$:/state/tab--86143343</li>
 
 <li>$:/state/tab-102244450</li>
+
+<li>$:/state/tab-1061341531</li>
 
 <li>$:/state/tab-11433013</li>
 
@@ -418,6 +426,8 @@ Error message and password prompt
 <li>$:/tags/EditToolbar</li>
 
 <li>$:/tags/PageControls</li>
+
+<li>$:/tags/SideBar</li>
 
 <li>$:/tags/ViewTemplate</li>
 
@@ -465,7 +475,7 @@ Error message and password prompt
 
 <li>andy matuschak</li>
 
-<li>Custom Theme</li>
+<li>custom theme</li>
 
 <li>devine lu linvega</li>
 
@@ -697,7 +707,7 @@ Left column: &lt;&lt;switchStoryView $:/view zoomin&gt;&gt;
 
 Right column: &lt;&lt;switchStoryView $:/_sq/Stories/config/Story2-storyview classic&gt;&gt;</pre>
 </div>
-<div caption="{{$:/core/images/preview-open}}" created="20200129233103456" modified="20200503153200805" tags="$:/tags/SideBar stroll" title="$:/.giffmex/sidebar/tabs/strollcontrols">
+<div caption="{{$:/core/images/preview-open}}" created="20200129233103456" modified="20200608165507872" tags="stroll $:/tags/SideBar" title="$:/.giffmex/sidebar/tabs/strollcontrols">
 <pre>\define tagreset() 
 &lt;$list filter=&quot;[tag[refs]sort[created]] -[[$(currentTiddler)$]]&quot; variable=&quot;removeme&quot;&gt;
 &lt;$action-listops  $tiddler=&lt;&lt;removeme&gt;&gt; $tags=&quot;+[remove[$:/tags/ViewTemplate]]&quot;/&gt;
@@ -756,7 +766,7 @@ Right column: &lt;&lt;switchStoryView $:/_sq/Stories/config/Story2-storyview cla
 &lt;/div&gt;
 </pre>
 </div>
-<div caption="Highlights in context" created="20200102141715979" modified="20200608164744550" tags="blinks refs stroll $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refscontext">
+<div caption="Highlights in context" created="20200102141715979" modified="20200503154222003" tags="blinks refs stroll" title="$:/.giffmex/ViewTemplate/refscontext">
 <pre>&lt;span class=&quot;viewtemplatebigtext&quot;&gt;
 
 &lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
@@ -765,7 +775,7 @@ Right column: &lt;&lt;switchStoryView $:/_sq/Stories/config/Story2-storyview cla
 
 &lt;$vars searchme=&lt;&lt;currentTiddler&gt;&gt; searchspx={{{ [&lt;currentTiddler&gt;escaperegexp[]]}}} &gt;
 
-&lt;$list filter=&quot;[!is[system]all[current]backlinks[]!tag[outlines]!tag[hide]sort[title]] -[is[current]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;span class=&quot;&quot;&gt;&lt;$link&gt;&lt;span class=&quot;graybox&quot;&gt;&lt;$context term=&lt;&lt;searchme&gt;&gt; /&gt;&lt;/span&gt;&lt;/$link&gt;&lt;/span&gt;&lt;/$list&gt;
+&lt;$list filter=&quot;[!is[system]all[current]backlinks[]!tag[outlines]!tag[hide]sort[title]] -[is[current]]&quot;&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;span class=&quot;indent1&quot;&gt;&lt;$link&gt;&lt;span class=&quot;graybox&quot;&gt;&lt;$context term=&lt;&lt;searchme&gt;&gt; /&gt;&lt;/span&gt;&lt;/$link&gt;&lt;/span&gt;&lt;/$list&gt;
 &lt;/$vars&gt;
 
 &lt;/$reveal&gt;
@@ -775,7 +785,7 @@ Right column: &lt;&lt;switchStoryView $:/_sq/Stories/config/Story2-storyview cla
 <div caption="Hidden" created="20200502165303215" creator="Quick Config" modified="20200503154220033" modifier="Quick Config" tags="blinks refs stroll" title="$:/.giffmex/ViewTemplate/refshidden" type="application/x-tiddler">
 <pre></pre>
 </div>
-<div bag="default" caption="Simple links" created="20200126143031898" modified="20200608164306808" revision="0" tags="blinks refs stroll" title="$:/.giffmex/ViewTemplate/refslinks" type="text/vnd.tiddlywiki">
+<div bag="default" caption="Simple links" created="20200126143031898" modified="20200504201318164" revision="0" tags="blinks refs stroll $:/tags/ViewTemplate" title="$:/.giffmex/ViewTemplate/refslinks" type="text/vnd.tiddlywiki">
 <pre>&lt;span class=&quot;viewtemplatebigtext&quot;&gt;
 
 &lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
@@ -804,7 +814,7 @@ Right column: &lt;&lt;switchStoryView $:/_sq/Stories/config/Story2-storyview cla
 
 &lt;/span&gt;</pre>
 </div>
-<div caption="Full text under sliders" created="20200126142157739" modified="20200608164255827" tags="blinks refs stroll" title="$:/.giffmex/ViewTemplate/refstranscludecollapse">
+<div caption="Full text under sliders" created="20200126142157739" modified="20200504200732291" tags="blinks refs stroll" title="$:/.giffmex/ViewTemplate/refstranscludecollapse">
 <pre>&lt;span class=&quot;viewtemplatebigtext&quot;&gt;
 
 &lt;$reveal type=&quot;nomatch&quot; stateTitle=&lt;&lt;folded-state&gt;&gt; text=&quot;hide&quot; tag=&quot;div&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
@@ -974,22 +984,22 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div bag="default" created="20200106214031452" modified="20200502175035211" revision="0" tags="stroll" title="$:/config/RelinkOnRename" type="text/vnd.tiddlywiki">
 <pre>yes</pre>
 </div>
-<div created="20200608010724333" modified="20200608164902647" title="$:/config/SideBar/Visibility/$:/.giffmex/sidebar/advancedconfig">
+<div created="20200608010724333" modified="20200608165220872" title="$:/config/SideBar/Visibility/$:/.giffmex/sidebar/advancedconfig">
 <pre>hide</pre>
 </div>
-<div created="20200608010725795" modified="20200608164900600" title="$:/config/SideBar/Visibility/$:/.giffmex/sidebar/tabs/strollcontrols">
+<div created="20200608010725795" modified="20200608010725795" title="$:/config/SideBar/Visibility/$:/.giffmex/sidebar/tabs/strollcontrols">
 <pre>hide</pre>
 </div>
-<div created="20200608010722701" modified="20200608164910577" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/More">
+<div created="20200608010722701" modified="20200608165906753" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/More">
 <pre>hide</pre>
 </div>
-<div created="20200608132238731" modified="20200608135621525" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Open">
+<div created="20200608132238731" modified="20200608165901690" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Open">
 <pre>hide</pre>
 </div>
 <div created="20200608132231801" modified="20200608132232735" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent">
 <pre>show</pre>
 </div>
-<div created="20200608010721576" modified="20200608165000370" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Tools">
+<div created="20200608010721576" modified="20200608165908790" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Tools">
 <pre>hide</pre>
 </div>
 <div bag="default" created="20200414150157768" modified="20200502181428010" revision="0" tags="stroll" title="$:/config/Tiddlers/TitleLinks" type="text/vnd.tiddlywiki">
@@ -1022,7 +1032,7 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20200504150240334" modified="20200608034501170" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here">
 <pre>hide</pre>
 </div>
-<div created="20200608164453862" modified="20200608164647375" title="$:/config/Whitespace/search">
+<div created="20200608165243350" modified="20200608165512447" title="$:/config/Whitespace/search">
 <pre>no</pre>
 </div>
 <div created="20200507132103667" modified="20200507132103667" title="$:/ControlPanel 1">
@@ -10416,6 +10426,9 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
     }
 }</pre>
 </div>
+<div created="20200608165413137" modified="20200608165441297" tags="$:/tags/Image" title="$:/core/images/preview-open">
+<pre>&lt;svg width=&quot;100%&quot; class=&quot;tc-image-preview-open tc-image-button&quot; viewBox=&quot;0 0 128 128&quot;&gt;&lt;g fill-rule=&quot;evenodd&quot;&gt;&lt;path d=&quot;M64.11 99.588c-24.83 0-47.754-11.596-62.534-30.957a7.148 7.148 0 010-8.675C16.356 40.596 39.28 29 64.11 29c24.83 0 47.753 11.596 62.534 30.956a7.148 7.148 0 010 8.675c-14.78 19.36-37.703 30.957-62.534 30.957zm46.104-32.007c1.44-1.524 1.44-3.638 0-5.162C99.326 50.9 82.439 44 64.147 44S28.968 50.9 18.08 62.42c-1.44 1.523-1.44 3.637 0 5.16C28.968 79.1 45.855 86 64.147 86s35.179-6.9 46.067-18.42z&quot;/&gt;&lt;path d=&quot;M63.5 88C76.479 88 87 77.479 87 64.5S76.479 41 63.5 41 40 51.521 40 64.5 50.521 88 63.5 88z&quot;/&gt;&lt;/g&gt;&lt;/svg&gt;</pre>
+</div>
 <div bag="default" created="20200415231538799" modified="20200415231541978" module-type="filteroperator" revision="0" title="$:/core/modules/filters/has.js" type="application/javascript">
 <pre>/*\
 title: $:/core/modules/filters/has.js
@@ -10571,10 +10584,10 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20200608011510419" modified="20200608011511026" title="$:/GitHub/Username">
 <pre>seekr</pre>
 </div>
-<div modified="20200608141258722" status="complete" title="$:/Import">
+<div modified="20200608150658840" status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Custom Theme]]</pre>
+# [[custom theme]]</pre>
 </div>
 <div created="20200608010144109" modified="20200608010146269" title="$:/Import!!popup-tiddlers.html">
 <pre>no</pre>
@@ -12271,6 +12284,12 @@ searchbarchoice: combined</pre>
 <div created="20200425181600201" modified="20200425181604513" title="$:/state/plugin-info--896887961-$:/plugins/sq/Stories---1130285312">
 <pre>settings</pre>
 </div>
+<div created="20200608165258650" modified="20200608165318417" title="$:/state/plugin-info-334910430-$:/core">
+<pre>yes</pre>
+</div>
+<div created="20200608165252001" modified="20200608165319643" title="$:/state/plugin-info-334910430-$:/core---1812962263">
+<pre>contents</pre>
+</div>
 <div created="20200429221104414" modified="20200429231124917" title="$:/state/refsection">
 <pre>hide</pre>
 </div>
@@ -12283,7 +12302,7 @@ searchbarchoice: combined</pre>
 <div created="20200423200401447" modified="20200423210926655" title="$:/state/ShowPaletteEditor">
 <pre>no</pre>
 </div>
-<div created="20200418121802381" modified="20200608135708178" title="$:/state/sidebar">
+<div created="20200418121802381" modified="20200608165206956" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200423135524613" modified="20200502164032606" title="$:/state/strollhometabs--312553599">
@@ -12292,8 +12311,8 @@ searchbarchoice: combined</pre>
 <div created="20200502164750943" modified="20200504214737913" title="$:/state/strollhometabs-338615865">
 <pre>A stroll through Stroll</pre>
 </div>
-<div created="20200418122550429" modified="20200608164833025" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20200418122550429" modified="20200608165517520" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200418132348763" modified="20200608133649808" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
@@ -12309,6 +12328,9 @@ searchbarchoice: combined</pre>
 </div>
 <div created="20200423200356184" modified="20200423200356184" title="$:/state/tab-102244450">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
+</div>
+<div created="20200608165241617" modified="20200608165242295" title="$:/state/tab-1061341531">
+<pre>$:/core/ui/DefaultSearchResultList</pre>
 </div>
 <div created="20200418151636450" modified="20200421145858496" title="$:/state/tab-11433013">
 <pre>.topicList</pre>
@@ -12358,14 +12380,17 @@ searchbarchoice: combined</pre>
 <div bag="default" created="20200127183739219" list="$:/core/ui/Buttons/home $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/.giffmex/buttons/newnote-datetime $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/refresh $:/core/ui/Buttons/more-page-actions" modified="20200502175037744" revision="0" tags="stroll" title="$:/tags/PageControls" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
+<div created="20200608165507872" list="$:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608165507872" title="$:/tags/SideBar">
+<pre></pre>
+</div>
 <div bag="default" created="20200128153730498" list="$:/.giffmex/ViewTemplate/title $:/core/ui/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/core/ui/ViewTemplate/body $:/.giffmex/ViewTemplate/viewfullnotes $:/.giffmex/ViewTemplate/refscontext $:/.giffmex/ViewTemplate/refslinks $:/.giffmex/ViewTemplate/refstranscludecollapse" modified="20200502175038389" revision="0" tags="stroll" title="$:/tags/ViewTemplate" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
 <div bag="default" created="20200127144249151" list="$:/core/ui/Buttons/fold $:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/.giffmex/viewtemplate/viewrefs $:/jd/fullscreen-editor/EditButton $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others" modified="20200502175036301" revision="0" tags="stroll" title="$:/tags/ViewToolbar" type="text/vnd.tiddlywiki">
 <pre></pre>
 </div>
-<div created="20200418122547595" modified="20200608164830082" title="$:/temp/advancedsearch">
-<pre>html body.tc-body .graybox</pre>
+<div created="20200418122547595" modified="20200608165513986" title="$:/temp/advancedsearch">
+<pre>tc-btn-invisible</pre>
 </div>
 <div created="20200608005830203" modified="20200608005830203" title="$:/temp/HidePluginWarning">
 <pre>yes</pre>
@@ -12452,7 +12477,7 @@ searchbarchoice: combined</pre>
 <div created="20200502174943975" modified="20200502174950301" title="$:/temp/RenameTags/search">
 <pre>tb</pre>
 </div>
-<div created="20200418122544376" modified="20200608164647377" title="$:/temp/search">
+<div created="20200418122544376" modified="20200608165512448" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20200429214841632" modified="20200429214841632" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.22/index.html" url="https://tiddlywiki.com/library/v5.1.22/index.html">
@@ -12618,7 +12643,7 @@ searchbarchoice: combined</pre>
 <div created="20200527025125459" modified="20200608133112245" title="andy matuschak" tmap.id="acf177e8-30ab-420f-a8f4-a03b0d48f1f9">
 <pre>[[andy matuschak]] lives at andymatuschak.org. And his inspiring [[evergreen notes]] here notes.andymatuschak.org</pre>
 </div>
-<div created="20200604202823875" modified="20200608164845985" tags="$:/tags/Stylesheet" title="Custom Theme" type="text/css">
+<div created="20200604202823875" modified="20200608165848754" tags="$:/tags/Stylesheet" title="custom theme" type="text/css">
 <pre>:root {
 	--background-sidebar: #f4f4f4;
 	--background-story: #f6f8f9;
@@ -12652,6 +12677,14 @@ body.tc-body {
 	line-height: 1.6;
 }
 
+.jd-sidebar-column .tc-btn-invisible {
+	height: 20px;
+}
+
+.jd-sidebar-column .tc-btn-invisible svg {
+	height: 20px;
+}
+
 /* There's no need to optimizeLegibility. */
 html {
 	text-rendering: auto;
@@ -12670,9 +12703,6 @@ a.tc-tiddlylink-external {
 html body.tc-body .graybox, .tw-context {
 	border-radius: 5px;
 	background: var(--color-graybox);
-	width: 100%;
-	padding: 5px;
-	margin: 0;
 }</pre>
 </div>
 <div created="20200527025125451" modified="20200608133026430" title="devine lu linvega" tmap.id="c393b736-c4d1-499e-8de5-df6302eb947d">
