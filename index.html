@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>í ¼í¾¨ Custom Theme</li>
+
 <li>$:/_sq/Stories/config/openLinkDivert</li>
 
 <li>$:/_sq/Stories/config/sidebaroverlaybreakpoint</li>
@@ -493,6 +495,60 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20200604202823875" modified="20200606115941860" tags="$:/tags/Stylesheet" title="í ¼í¾¨ Custom Theme" type="text/css">
+<pre>:root {
+	--background-sidebar: #f4f4f4;
+	--background-story: #f6f8f9;
+	--box-shadow-tiddler: 0 1px 3px 0 rgba(21,27,38,.15);
+	--box-shadow-sidebar: 0 1px 4px rgba(0,0,0,0.15);
+	--color-link: #0366d6;
+	--color-external-link: #00278e;
+	--color-graybox: #fff5f2;
+}
+
+/* Tiddler body */
+body.tc-body {
+	color: black;
+	background: var(--background-story);
+}
+
+/* TiddlyWiki sidebar */
+.jd-sidebar {
+	background: var(--background-sidebar);
+	box-shadow: var(--box-shadow-sidebar);
+}
+
+.jd-sidebar .jd-header, .jd-sidebar:hover .jd-header {
+	background: var(--background-sidebar);
+}
+
+/* Tiddler and sidebar item frames. */
+.tc-tiddler-frame, .jd-sidebar-column {
+	border-radius: 5px;
+	box-shadow: var(--box-shadow-tiddler);
+	line-height: 1.6;
+}
+
+/* There's no need to optimizeLegibility. */
+html {
+	text-rendering: auto;
+	-webkit-font-smoothing: auto;
+}
+
+a.tc-tiddlylink {
+	color: var(--color-link);
+}
+
+a.tc-tiddlylink-external {
+	color: var(--color-external-link);
+}
+
+/* References */
+html body.tc-body .graybox, .tw-context {
+	border-radius: 5px;
+	background: var(--color-graybox);
+}</pre>
+</div>
 <div bag="default" created="20170629173808777" modified="20200504143324443" revision="0" title="$:/_sq/Stories/config/openLinkDivert" type="text/vnd.tiddlywiki">
 <pre>top</pre>
 </div>
@@ -982,10 +1038,10 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div created="20200608132238731" modified="20200608132930258" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Open">
 <pre>hide</pre>
 </div>
-<div created="20200608132231801" modified="20200608132232735" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent">
+<div created="20200608132231801" modified="20200608135226442" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent">
 <pre>show</pre>
 </div>
-<div created="20200608010721576" modified="20200608133136079" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Tools">
+<div created="20200608010721576" modified="20200608135227612" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Tools">
 <pre>hide</pre>
 </div>
 <div bag="default" created="20200414150157768" modified="20200502181428010" revision="0" tags="stroll" title="$:/config/Tiddlers/TitleLinks" type="text/vnd.tiddlywiki">
@@ -10567,7 +10623,7 @@ $:/config/ViewToolbarButtons/Visibility/$(listItem)$
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/themes/tiddlywiki/vanilla]]</pre>
+# [[í ¼í¾¨ Custom Theme]]</pre>
 </div>
 <div created="20200608010144109" modified="20200608010146269" title="$:/Import!!popup-tiddlers.html">
 <pre>no</pre>
@@ -12306,8 +12362,8 @@ searchbarchoice: combined</pre>
 <div created="20200418151636450" modified="20200421145858496" title="$:/state/tab-11433013">
 <pre>.topicList</pre>
 </div>
-<div created="20200418121928767" modified="20200608133649156" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200418121928767" modified="20200608135150870" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20200608011508148" modified="20200608031848896" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
@@ -12342,7 +12398,7 @@ searchbarchoice: combined</pre>
 <div bag="default" revision="1" title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20200608134314280" list="about" modified="20200608134333078" title="$:/StoryList">
+<div created="20200608134314280" list="about" modified="20200608135148497" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200519141000553" list="$:/.giffmex/Buttons/more-tiddler-edit-actions $:/core/ui/Buttons/delete $:/core/ui/Buttons/cancel $:/core/ui/Buttons/save" modified="20200521145647980" tags="$:/giffmex/bigeditarea $:/giffmex/stroll" title="$:/tags/EditToolbar">
