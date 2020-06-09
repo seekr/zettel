@@ -303,6 +303,8 @@ Error message and password prompt
 
 <li>$:/state/notebook-sidebar-section</li>
 
+<li>$:/state/plugin-info-334910430-$:/core---1812962263</li>
+
 <li>$:/state/searchbar</li>
 
 <li>$:/state/sidebar</li>
@@ -335,7 +337,11 @@ Error message and password prompt
 
 <li>$:/tags/SideBar</li>
 
+<li>$:/temp/advancedsearch</li>
+
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/NewTagName</li>
 
 <li>$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES</li>
 
@@ -572,6 +578,8 @@ Error message and password prompt
 <li>evergreen notes</li>
 
 <li>mario siqueira</li>
+
+<li>myFooter</li>
 
 <li>revert last git</li>
 
@@ -10556,11 +10564,14 @@ html body.tc-body {
 <div created="20200609001503292" modified="20200609001503292" title="$:/state/image-picker/system--1217244810">
 <pre>show</pre>
 </div>
-<div created="20200429142736872" modified="20200609201935563" title="$:/state/notebook-sidebar">
+<div created="20200429142736872" modified="20200609210234058" title="$:/state/notebook-sidebar">
 <pre>no</pre>
 </div>
-<div created="20200429194630535" modified="20200609201921158" title="$:/state/notebook-sidebar-section">
-<pre>$:/plugins/nico/notebook/Sidebar/Recent</pre>
+<div created="20200429194630535" modified="20200609210224086" title="$:/state/notebook-sidebar-section">
+<pre></pre>
+</div>
+<div created="20200609205403973" modified="20200609205403973" title="$:/state/plugin-info-334910430-$:/core---1812962263">
+<pre>contents</pre>
 </div>
 <div created="20200608235211598" modified="20200608235212208" title="$:/state/searchbar">
 <pre>show</pre>
@@ -10604,11 +10615,14 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200609201932700" list="about" modified="20200609203713218" title="$:/StoryList">
+<div created="20200609205356973" list="about" modified="20200609210115977" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200608235839584" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/Open $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608235847368" title="$:/tags/SideBar">
 <pre></pre>
+</div>
+<div created="20200609205356969" modified="20200609205401088" title="$:/temp/advancedsearch">
+<pre>$:/tags/ViewTemplate</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10667,6 +10681,9 @@ html body.tc-body {
         }
     }
 }</pre>
+</div>
+<div created="20200609205514877" modified="20200609205514877" title="$:/temp/NewTagName">
+<pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200608234105880" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200608234105880" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
@@ -12142,7 +12159,7 @@ Sidebar position:
 <div created="20200527025125459" modified="20200608133112245" title="andy matuschak" tmap.id="acf177e8-30ab-420f-a8f4-a03b0d48f1f9">
 <pre>[[andy matuschak]] lives at andymatuschak.org. And his inspiring [[evergreen notes]] here notes.andymatuschak.org</pre>
 </div>
-<div created="20200604202823875" modified="20200609004725312" tags="$:/tags/Stylesheet" title="custom theme" type="text/css">
+<div created="20200604202823875" modified="20200609210216496" tags="$:/tags/Stylesheet" title="custom theme" type="text/css">
 <pre>:root {
 	--background-sidebar: #f4f4f4;
 	--background-story: #f6f8f9;
@@ -12157,6 +12174,10 @@ Sidebar position:
 body.tc-body {
 	color: black;
 	/*background: var(--background-story);*/
+}
+
+.nc-bar {
+	background: #f7f7f7;
 }
 
 /* TiddlyWiki sidebar */
@@ -12243,6 +12264,10 @@ sudo powertop auto-tune
 </div>
 <div created="20200526005712717" modified="20200608132857310" title="mario siqueira" tmap.id="b3f10c63-d428-405c-a9f5-81ebfe974c9f">
 <pre>[[mario siqueira]] is a designer based in Buenos Aires, Argentina. If you care, this is [[how I compute|workstations]].</pre>
+</div>
+<div created="20200609205443882" modified="20200609205959266" tags="$:/tags/ViewTemplate" title="myFooter" type="text/vnd.tiddlywiki">
+<pre>&lt;hr style=&quot;border-top: 1px dotted #8c8b8b;&quot; /&gt;
+&lt;$list filter=&quot;[all[current]backlinks[]sort[title]]&quot; emptyMessage=&lt;&lt;lingo TiddlerInfo/References/Empty&gt;&gt; &gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;, &lt;/$link&gt;&lt;/$list&gt;</pre>
 </div>
 <div created="20200526013259768" modified="20200608133122770" tags="git" title="revert last git" tmap.id="d92749cf-bf81-45e8-89f3-fef2e80d59db">
 <pre>```
