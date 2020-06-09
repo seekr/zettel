@@ -227,6 +227,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/AutoSave</li>
+
 <li>$:/config/EmptyStoryMessage</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -261,6 +263,14 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/GitHub/Filename</li>
+
+<li>$:/GitHub/Path</li>
+
+<li>$:/GitHub/Repo</li>
+
+<li>$:/GitHub/Username</li>
+
 <li>$:/Import</li>
 
 <li>$:/Import!!popup-$:/textures/2</li>
@@ -285,6 +295,8 @@ Error message and password prompt
 
 <li>$:/state/notebook-sidebar</li>
 
+<li>$:/state/notebook-sidebar-section</li>
+
 <li>$:/state/searchbar</li>
 
 <li>$:/state/sidebar</li>
@@ -296,6 +308,8 @@ Error message and password prompt
 <li>$:/state/tab--86143343</li>
 
 <li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab-2065006209</li>
 
 <li>$:/state/tab-702914072</li>
 
@@ -569,6 +583,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20200609004739882" modified="20200609004739882" title="$:/config/AutoSave">
+<pre>no</pre>
+</div>
 <div created="20190202142826323" creator="jd" modified="20190203153504860" modifier="jd" title="$:/config/EmptyStoryMessage">
 <pre>{{$:/themes/jd/Mono/EmptyStoryMessage}}</pre>
 </div>
@@ -9991,6 +10008,18 @@ Error message and password prompt
 <div created="20200608234336961" modified="20200608234339052" title="$:/DefaultTiddlers">
 <pre>about</pre>
 </div>
+<div created="20200609004801287" modified="20200609004806405" title="$:/GitHub/Filename">
+<pre>index.html</pre>
+</div>
+<div created="20200609004759082" modified="20200609004759082" title="$:/GitHub/Path">
+<pre>/</pre>
+</div>
+<div created="20200609004751116" modified="20200609004755929" title="$:/GitHub/Repo">
+<pre>seekr/zettel</pre>
+</div>
+<div created="20200609004744107" modified="20200609004748270" title="$:/GitHub/Username">
+<pre>seekr</pre>
+</div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
@@ -10304,8 +10333,11 @@ html body.tc-body {
 <div created="20200609001503292" modified="20200609001503292" title="$:/state/image-picker/system--1217244810">
 <pre>show</pre>
 </div>
-<div created="20200429142736872" modified="20200609003821966" title="$:/state/notebook-sidebar">
+<div created="20200429142736872" modified="20200609004656446" title="$:/state/notebook-sidebar">
 <pre>no</pre>
+</div>
+<div created="20200429194630535" modified="20200609004652083" title="$:/state/notebook-sidebar-section">
+<pre>$:/plugins/nico/notebook/Sidebar/Recent</pre>
 </div>
 <div created="20200608235211598" modified="20200608235212208" title="$:/state/searchbar">
 <pre>show</pre>
@@ -10322,8 +10354,11 @@ html body.tc-body {
 <div created="20200608234003418" modified="20200608234006095" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200608234001932" modified="20200609003759804" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200608234001932" modified="20200609004737474" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
+</div>
+<div created="20200609004741424" modified="20200609004741424" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20200609000613288" modified="20200609000613288" title="$:/state/tab-702914072">
 <pre>$:/core/ui/TiddlerInfo/References</pre>
@@ -10337,7 +10372,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200609003757195" list="about" modified="20200609003757195" title="$:/StoryList">
+<div created="20200609004641683" list="about" modified="20200609004733888" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200608235839584" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/Open $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608235847368" title="$:/tags/SideBar">
@@ -10356,19 +10391,19 @@ html body.tc-body {
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/msiqueira/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;https://seekr.github.io/zettel/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;seekr.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;seekr.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -10376,7 +10411,7 @@ html body.tc-body {
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/msiqueira/projects/zettel/index.html&quot;
+            &quot;text&quot;: &quot;/zettel/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -10384,15 +10419,15 @@ html body.tc-body {
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;https://seekr.github.io&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;360&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;725&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -11875,7 +11910,7 @@ Sidebar position:
 <div created="20200527025125459" modified="20200608133112245" title="andy matuschak" tmap.id="acf177e8-30ab-420f-a8f4-a03b0d48f1f9">
 <pre>[[andy matuschak]] lives at andymatuschak.org. And his inspiring [[evergreen notes]] here notes.andymatuschak.org</pre>
 </div>
-<div created="20200604202823875" modified="20200609003006687" tags="$:/tags/Stylesheet" title="custom theme" type="text/css">
+<div created="20200604202823875" modified="20200609004725312" tags="$:/tags/Stylesheet" title="custom theme" type="text/css">
 <pre>:root {
 	--background-sidebar: #f4f4f4;
 	--background-story: #f6f8f9;
@@ -11909,13 +11944,13 @@ body.tc-body {
 	line-height: 1.6;
 }
 
-.tc-story-river {
+/*.tc-story-river {
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(auto-fill, minmax(440px,1fr));
 grid-auto-rows: minmax(200px);
     grid-auto-flow: dense;
-}
+}*/
 
 .story-backdrop {
 	display: none;
