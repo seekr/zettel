@@ -599,6 +599,8 @@ Error message and password prompt
 
 <li>personal workstation</li>
 
+<li>power management</li>
+
 <li>profile picture</li>
 
 <li>revert last git</li>
@@ -10382,10 +10384,10 @@ html body.tc-body {
 <div created="20200609001503292" modified="20200609001503292" title="$:/state/image-picker/system--1217244810">
 <pre>show</pre>
 </div>
-<div created="20200429142736872" modified="20200613212825072" title="$:/state/notebook-sidebar">
+<div created="20200429142736872" modified="20200613213506326" title="$:/state/notebook-sidebar">
 <pre>no</pre>
 </div>
-<div created="20200429194630535" modified="20200613212823742" title="$:/state/notebook-sidebar-section">
+<div created="20200429194630535" modified="20200613213504661" title="$:/state/notebook-sidebar-section">
 <pre>$:/plugins/nico/notebook/Sidebar/Recent</pre>
 </div>
 <div created="20200609205403973" modified="20200609205403973" title="$:/state/plugin-info-334910430-$:/core---1812962263">
@@ -12108,7 +12110,7 @@ apropos browser
 ```
 </pre>
 </div>
-<div created="20200526005712717" modified="20200613200053937" title="mario siqueira" tmap.id="b3f10c63-d428-405c-a9f5-81ebfe974c9f">
+<div created="20200526005712717" modified="20200613213401915" title="mario siqueira" tmap.id="b3f10c63-d428-405c-a9f5-81ebfe974c9f">
 <pre>[[mario siqueira]] is a designer based in Buenos Aires, Argentina. If you care, this is [[how I compute|workstations]].
 
 [img[profile picture]]</pre>
@@ -12127,16 +12129,44 @@ One way I use this is to simply automatically run server apps on reboot.
 <pre>&lt;hr style=&quot;border-top: 1px dotted #8c8b8b;&quot; /&gt;
 &lt;$list filter=&quot;[all[current]backlinks[]sort[title]]&quot; emptyMessage=&quot; &quot; &gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;, &lt;/$link&gt;&lt;/$list&gt;</pre>
 </div>
-<div created="20200610142722716" modified="20200610142828775" title="personal workstation">
-<pre>''Some configs I use'' (many taken [[from here|https://github.com/neauoire/linux-notebook/tree/master/unix#battery-management]])
+<div created="20200610142722716" modified="20200613213318541" title="personal workstation">
+<pre>
 
-* ''Power management''
+```
+user@t430:~/$ screenfetch
 
+         eeeeeeeeeeeeeeeee           OS: elementary OS 5.1.5 hera
+      eeeeeeeeeeeeeeeeeeeeeee        Kernel: x86_64 Linux 5.4.15-050415
+    eeeee  eeeeeeeeeeee   eeeee      
+  eeee   eeeee       eee     eeee    Packages: 2262
+ eeee   eeee          eee     eeee   Shell: bash 4.4.20
+eee    eee            eee       eee  Resolution: 1600x900
+eee   eee            eee        eee  DE: GNOME 
+ee    eee           eeee       eeee  WM: Mutter(Gala)
+ee    eee         eeeee      eeeeee  WM Theme: elementary
+ee    eee       eeeee      eeeee ee  GTK Theme: elementary [GTK2/3]
+eee   eeee   eeeeee      eeeee  eee  Icon Theme: elementary
+eee    eeeeeeeeee     eeeeee    eee  Font: Inter 9
+ eeeeeeeeeeeeeeeeeeeeeeee    eeeee   CPU: Intel Core i5-3320M @ 4x 3.3GHz
+  eeeeeeee eeeeeeeeeeee      eeee    GPU: i915drmfb
+    eeeee                 eeeee      RAM: 2591MiB / 7662MiB
+      eeeeeee         eeeeeee       
+         eeeeeeeeeeeeeeeee          
+
+```
+
+
+''Some configs I use'' (many taken [[from here|https://github.com/neauoire/linux-notebook/tree/master/unix#battery-management]])
+
+* [[power management]]
+* [[my own crontab]]
+</pre>
+</div>
+<div created="20200613213207550" modified="20200613213247311" tags="linux" title="power management">
+<pre>
 ```
 sudo powertop auto-tune
 ```
-
-* [[my own crontab]]
 </pre>
 </div>
 <div created="20200613195803543" modified="20200613200019589" tags="" title="profile picture" type="image/jpeg">
@@ -12158,11 +12188,11 @@ from [[stackoverflow|https://stackoverflow.com/questions/19826574/how-can-i-reve
 <div created="20200608031451426" modified="20200608133051417" tags="link" title="scrapbox">
 <pre>[[https://scrapbox.io]]</pre>
 </div>
-<div created="20200605140640524" modified="20200613212804014" title="workstations">
+<div created="20200605140640524" modified="20200613213455038" title="workstations">
 <pre>At work have been using macOS while personally I have mostly been using Windows until I got my latest laptop, when I moved to [[elementary os]].
 
 * [[personal workstation]]:  a refurbished Lenovo Thinkpad T430.
-* [[work workstation]]: a touch bar o_Ô ~MacBookPro14,3 running latest corporate macos image.</pre>
+* [[work workstation]]: a touch bar o_Ô ~MacBookPro14,3 running latest corporate macOS image.</pre>
 </div>
 
 
