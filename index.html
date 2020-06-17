@@ -583,6 +583,8 @@ Error message and password prompt
 
 <li>buying second hand</li>
 
+<li>caddy proxy</li>
+
 <li>Cheatsheet</li>
 
 <li>create systemd service</li>
@@ -10392,7 +10394,7 @@ html body.tc-body {
 <div created="20200609001503292" modified="20200609001503292" title="$:/state/image-picker/system--1217244810">
 <pre>show</pre>
 </div>
-<div created="20200429142736872" modified="20200617031001697" title="$:/state/notebook-sidebar">
+<div created="20200429142736872" modified="20200617031238694" title="$:/state/notebook-sidebar">
 <pre>no</pre>
 </div>
 <div created="20200429194630535" modified="20200614000137182" title="$:/state/notebook-sidebar-section">
@@ -10452,7 +10454,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200617030053399" list="about" modified="20200617030806374" title="$:/StoryList">
+<div created="20200617030053399" list="about" modified="20200617031344773" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200608235839584" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/Open $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608235847368" title="$:/tags/SideBar">
@@ -12043,6 +12045,18 @@ chmod +x script.sh
 * //attraction to previous gen gadgets that I could not afford when they were new ie. Blackberry Passport, Palm Prē 2//
 * //avoid Apple (closed) ecosystem. for a while I got a second hand iPhone 6 as I realized that it being such a common device it would always be relatively trivial for me to service it with spare parts wherever I was in the world. Then I realized how now I can't service the software.//</pre>
 </div>
+<div created="20200617031420510" modified="20200617031457579" title="caddy proxy">
+<pre>example of Caddyfile reverse proxy
+
+```
+sub.domain.com {
+	proxy / localhost:[port] {
+		transparent
+	}
+}
+```
+</pre>
+</div>
 <div created="20200613143147301" modified="20200613183154331" tags="" title="Cheatsheet">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc &quot;cheatsheet&quot;&gt;&gt;
@@ -12248,7 +12262,7 @@ from [[stackoverflow|https://stackoverflow.com/questions/19826574/how-can-i-reve
 
 [[andy matuschak]] routine: https://www.evernote.com/shard/s1/sh/4b3c5b0a-5cdc-4e61-b6c1-a66097092d3f/af7a3f9424f47679e3a52ef856b4ee00</pre>
 </div>
-<div created="20200617030520668" modified="20200617030943667" tags="linux books" title="running a Calibre server">
+<div created="20200617030520668" modified="20200617031247378" tags="linux books" title="running a Calibre server">
 <pre>based of [[this post|https://community.nethserver.org/t/howto-install-calibre-content-server/10436]]
 
 ```
@@ -12261,7 +12275,11 @@ from [[stackoverflow|https://stackoverflow.com/questions/19826574/how-can-i-reve
 	&quot;/var/lib/nethserver/calibre/library&quot;
 ```
 
-Can also run as a [[service|create systemd service]]</pre>
+Can also run as a [[service|create systemd service]]
+
+Requires existing user db as [[informed here|https://manual.calibre-ebook.com/server.html#managing-user-accounts-from-the-command-line-only]].
+
+Probably will want to [[setup a subdomain]] along with [[caddy proxy]].</pre>
 </div>
 <div created="20200608031451426" modified="20200608133051417" tags="link" title="scrapbox">
 <pre>[[https://scrapbox.io]]</pre>
