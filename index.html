@@ -233,6 +233,8 @@ Error message and password prompt
 
 <li>$:/config/EmptyStoryMessage</li>
 
+<li>$:/config/NewJournal/Tags</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler</li>
@@ -587,7 +589,7 @@ Error message and password prompt
 
 <li>caddy proxy</li>
 
-<li>Cheatsheet</li>
+<li>cheatsheet</li>
 
 <li>create systemd service</li>
 
@@ -600,6 +602,8 @@ Error message and password prompt
 <li>evergreen notes</li>
 
 <li>how to list browsers</li>
+
+<li>journal</li>
 
 <li>mario siqueira</li>
 
@@ -645,6 +649,9 @@ Error message and password prompt
 </div>
 <div created="20190202142826323" creator="jd" modified="20190203153504860" modifier="jd" title="$:/config/EmptyStoryMessage">
 <pre>{{$:/themes/jd/Mono/EmptyStoryMessage}}</pre>
+</div>
+<div modified="20200617042211940" tags="journal" title="$:/config/NewJournal/Tags">
+<pre></pre>
 </div>
 <div created="20200608235855822" modified="20200608235855822" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
@@ -10396,11 +10403,11 @@ html body.tc-body {
 <div created="20200609001503292" modified="20200609001503292" title="$:/state/image-picker/system--1217244810">
 <pre>show</pre>
 </div>
-<div created="20200429142736872" modified="20200617041812510" title="$:/state/notebook-sidebar">
+<div created="20200429142736872" modified="20200617042224419" title="$:/state/notebook-sidebar">
 <pre>no</pre>
 </div>
-<div created="20200429194630535" modified="20200617041807824" title="$:/state/notebook-sidebar-section">
-<pre>$:/plugins/nico/notebook/Sidebar/Tools</pre>
+<div created="20200429194630535" modified="20200617042223500" title="$:/state/notebook-sidebar-section">
+<pre>$:/plugins/nico/notebook/Sidebar/Recent</pre>
 </div>
 <div created="20200609205403973" modified="20200609205403973" title="$:/state/plugin-info-334910430-$:/core---1812962263">
 <pre>contents</pre>
@@ -10435,8 +10442,8 @@ html body.tc-body {
 <div created="20200609170704645" modified="20200609170716653" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/EditorTypes</pre>
 </div>
-<div created="20200608234001932" modified="20200617041801199" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Settings</pre>
+<div created="20200608234001932" modified="20200617042203927" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20200609004741424" modified="20200609004741424" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -10456,7 +10463,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200617041723762" list="about" modified="20200617041758530" title="$:/StoryList">
+<div created="20200617042033387" list="about" modified="20200617042202396" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200608235839584" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/Open $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608235847368" title="$:/tags/SideBar">
@@ -10523,7 +10530,7 @@ html body.tc-body {
     }
 }</pre>
 </div>
-<div created="20200609205514877" modified="20200617030540290" title="$:/temp/NewTagName">
+<div created="20200609205514877" modified="20200617042156836" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20200610144924678" modified="20200613143033737" title="$:/temp/notebook-search">
@@ -11997,7 +12004,7 @@ Sidebar position:
 <div created="20200609001426355" modified="20200609001507540" title="$:/themes/tiddlywiki/vanilla/settings/backgroundimage">
 <pre>$:/textures/2</pre>
 </div>
-<div created="20200617041809741" modified="20200617041949495" tags="Journal" title="16th June 2020">
+<div created="20200617041809741" modified="20200617042158284" tags="journal" title="16th June 2020">
 <pre>Couldn't postpone starting of mediation no more. Signed up to headspace. Should be smarted at disconnecting email and comms when I'm on personal time.</pre>
 </div>
 <div created="20200526005700135" modified="20200610181731158" title="about">
@@ -12062,7 +12069,7 @@ sub.domain.com {
 ```
 </pre>
 </div>
-<div created="20200613143147301" modified="20200613183154331" tags="" title="Cheatsheet">
+<div created="20200613143147301" modified="20200617042116947" tags="" title="cheatsheet">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc &quot;cheatsheet&quot;&gt;&gt;
 &lt;/div&gt;</pre>
@@ -12192,6 +12199,11 @@ html body.tc-body .graybox, .tw-context {
 apropos browser
 ```
 </pre>
+</div>
+<div created="20200617042122584" modified="20200617042140141" title="journal">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc &quot;journal&quot;&gt;&gt;
+&lt;/div&gt;</pre>
 </div>
 <div created="20200526005712717" modified="20200613213401915" title="mario siqueira" tmap.id="b3f10c63-d428-405c-a9f5-81ebfe974c9f">
 <pre>[[mario siqueira]] is a designer based in Buenos Aires, Argentina. If you care, this is [[how I compute|workstations]].
