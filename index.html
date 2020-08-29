@@ -585,6 +585,8 @@ Error message and password prompt
 
 <li>andy matuschak</li>
 
+<li>archive using wget</li>
+
 <li>autocomplete in bash</li>
 
 <li>bash shell scripts</li>
@@ -10435,7 +10437,7 @@ html body.tc-body {
 <div created="20200608235211598" modified="20200608235212208" title="$:/state/searchbar">
 <pre>show</pre>
 </div>
-<div created="20200613195809218" modified="20200814075418568" title="$:/state/showeditpreview">
+<div created="20200613195809218" modified="20200829130008962" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20200608233949153" modified="20200609002847993" title="$:/state/sidebar">
@@ -10459,7 +10461,7 @@ html body.tc-body {
 <div created="20200608234001932" modified="20200717023501991" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20200609004741424" modified="20200609004741424" title="$:/state/tab-2065006209">
+<div created="20200609004741424" modified="20200829125616100" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20200609000613288" modified="20200609000613288" title="$:/state/tab-702914072">
@@ -10538,7 +10540,7 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;725&quot;
+            &quot;text&quot;: &quot;740&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -12035,6 +12037,16 @@ Começou a levantar se de pé por si própria! Agarrando se no borde da mesa, do
 </div>
 <div created="20200527025125459" modified="20200608133112245" title="andy matuschak" tmap.id="acf177e8-30ab-420f-a8f4-a03b0d48f1f9">
 <pre>[[andy matuschak]] lives at andymatuschak.org. And his inspiring [[evergreen notes]] here notes.andymatuschak.org</pre>
+</div>
+<div created="20200829125620976" modified="20200829130016689" tags="cheatsheet" title="archive using wget">
+<pre>Add this to bashrc or zshrc and can archive and retrieve archived version of a domain `archive [domain.com]`
+
+
+```
+archive() { wget --recursive --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows --domains &quot;$1&quot; --no-parent &quot;$1&quot; }
+```
+
+[[Source|https://merveilles.town/@ovelny/104771550192916951]]</pre>
 </div>
 <div created="20200614000149622" modified="20200614000448330" tags="linux cheatsheet" title="autocomplete in bash">
 <pre>taken [[from here|https://superuser.com/a/1332850/493448]].
