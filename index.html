@@ -66,8 +66,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 	margin: 20px auto 0;
 	width: 200px;
 	text-align: center;
-	color: #283c46;
-	fill: #283c46;
+	color: #333333;
+	fill: #333333;
 }html body.tc-body {
   background: #f4f4f4;
 }
@@ -82,7 +82,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .line {
   width: 50px;
   height: 1px;
-  background: #999999;
+  background: #bbb;
   -webkit-animation: line 2s infinite; 
   -moz-animation: line 2s infinite; 
   -o-animation: line 2s infinite; 
@@ -101,7 +101,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .linetwo {
   width: 50px;
   height: 1px;
-  background: #999999;
+  background: #bbb;
   -webkit-animation: linetwo 2s infinite; 
   -moz-animation: linetwo 2s infinite; 
   -o-animation: linetwo 2s infinite; 
@@ -121,7 +121,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 .linethree {
   width: 50px;
   height: 1px;
-  background: #999999;
+  background: #bbb;
   -webkit-animation: linethree 2s infinite; 
   -moz-animation: linethree 2s infinite; 
   -o-animation: linethree 2s infinite; 
@@ -306,6 +306,8 @@ Error message and password prompt
 <li>$:/isEncrypted</li>
 
 <li>$:/palette</li>
+
+<li>$:/plugins/mario/nico-notebook</li>
 
 <li>$:/plugins/nico/notebook</li>
 
@@ -10178,7 +10180,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[20200907_194235_eightbit.png]]</pre>
+# [[$:/plugins/mario/nico-notebook]]</pre>
 </div>
 <div created="20200609001405679" modified="20200609001408715" title="$:/Import!!popup-$:/textures/2">
 <pre>no</pre>
@@ -10197,6 +10199,191 @@ Error message and password prompt
 </div>
 <div created="20190202142805411" creator="jd" modified="20200609210328632" modifier="jd" title="$:/palette">
 <pre>$:/plugins/nico/notebook/palette</pre>
+</div>
+<div author="Mario Siqueira" bag="default" core-version="&gt;=5.0.0" created="20200419141233574" dependents="$:/themes/tiddlywiki/vanilla" description="A modified theme based on Nicolas Petton's Notebook" modified="20200430132117748" name="Nico Notebook" plugin-priority="0" plugin-type="theme" revision="0" tags="" title="$:/plugins/mario/nico-notebook" type="application/json" version="0.0.1">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/core/ui/KeyboardShortcut/toggle-sidebar&quot;: {
+            &quot;created&quot;: &quot;20200430072238390&quot;,
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[[$:/state/notebook-sidebar]is[missing]] [{$:/state/notebook-sidebar}removeprefix[yes]]\&quot; emptyMessage=\&quot;\&quot;\&quot;\n&lt;$action-setfield $tiddler=\&quot;$:/state/notebook-sidebar\&quot; text=\&quot;yes\&quot;/&gt;\n\&quot;\&quot;\&quot;&gt;\n&lt;$action-setfield $tiddler=\&quot;$:/state/notebook-sidebar\&quot; text=\&quot;no\&quot;/&gt;\n&lt;/$list&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/core/ui/KeyboardShortcut/toggle-sidebar&quot;,
+            &quot;tags&quot;: &quot;$:/tags/KeyboardShortcut&quot;,
+            &quot;modified&quot;: &quot;20200430080803735&quot;,
+            &quot;key&quot;: &quot;((toggle-sidebar))&quot;
+        },
+        &quot;$:/core/ui/PageTemplate/sidebar&quot;: {
+            &quot;text&quot;: &quot;\\whitespace trim\n\\define config-title()\n$:/config/SideBarSegments/Visibility/$(listItem)$\n\\end\n\n&lt;$scrollable fallthrough=\&quot;no\&quot; class=\&quot;tc-sidebar-scrollable\&quot;&gt;\n\n&lt;div class=\&quot;tc-sidebar-header\&quot;&gt;\n\n&lt;$reveal state=\&quot;$:/state/sidebar\&quot; type=\&quot;match\&quot; text=\&quot;yes\&quot; default=\&quot;yes\&quot; retain=\&quot;yes\&quot; animate=\&quot;yes\&quot;&gt;\n\n&lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/tags/SideBarSegment]!has[draft.of]]\&quot; variable=\&quot;listItem\&quot;&gt;\n\n&lt;$reveal type=\&quot;nomatch\&quot; state=&lt;&lt;config-title&gt;&gt; text=\&quot;hide\&quot;  tag=\&quot;div\&quot;&gt;\n\n&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; mode=\&quot;block\&quot;/&gt;\n\n&lt;/$reveal&gt;\n\n&lt;/$list&gt;\n\n&lt;/$reveal&gt;\n\n&lt;/div&gt;\n\n&lt;/$scrollable&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/core/ui/PageTemplate/sidebar&quot;,
+            &quot;modified&quot;: &quot;20200430072116835&quot;,
+            &quot;created&quot;: &quot;20200430072116835&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/base&quot;: {
+            &quot;created&quot;: &quot;20200419141443144&quot;,
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n\\define if-sidebar(text)\n  &lt;$reveal state=\&quot;$:/state/notebook-sidebar\&quot; type=\&quot;match\&quot; text=\&quot;yes\&quot;&gt;\n    $text$\n  &lt;/$reveal&gt;\n\\end\n\n/* Top and bottom bars */\n\n/* Hide the top-right bar */\n.tc-topbar.tc-topbar-right {\n  display: none;\n}\n\ndiv.tc-sidebar-header {\n  padding: 0;\n  min-height: 0;\n}\n\n.tc-story-river {\n  padding: 0 !important;\n  margin-top: {{$:/plugins/mario/nico-notebook/metrics/topbar-height}};\n}\n\nh1.tc-site-title {\n  margin-top: 14px;\n  font-size: 1.5em !important;\n}\n\n.nc-bar {\n  position: fixed;\n  left: 0;\n  right: 0;\n  padding: 8px;\n  height: {{$:/plugins/mario/nico-notebook/metrics/topbar-height}};\n  background: #f7f7f7ed;\n  display: flex;\n  justify-content: space-between;\n}\n\n.nc-bar.nc-topbar {\n  top: 0;\n  border-bottom: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;\n  box-shadow: inset 0 -2px 2px -2px &lt;&lt;colour tiddler-border&gt;&gt;;\n}\n\n.nc-bar.nc-bottombar {\n  bottom: 0;\n  background: #f7f7f7;\n  border-top: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;\n  box-shadow: inset 0 2px 2px -2px &lt;&lt;colour tiddler-border&gt;&gt;;\n}\n\n.nc-bar .left svg {\n  fill: &lt;&lt;colour sidebar-controls-foreground&gt;&gt;;\n}\n\n.nc-bar .center {\n  width: 550px;\n  margin-left: 150px;\n}\n\n.nc-bar .center input {\n  width: 400px;\n  padding: .6em;\n  margin-top: -.2em;\n  background: white;\n  box-shadow: 0 2px 3px rgba(0,0,0,0.06);\n  transition: all ease-in .2s;\n  outline: 0;\n}\n\n.nc-bar .center .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n  width: 400px;\n  border: 0;\n  box-shadow: 0 0 6px 0 #ccc;\n  border-radius: 6px;\n  padding: 20px;\n}\n\n.nc-bar p {\n  margin: 0;\n}\n\n.nc-bar .tc-page-controls {\n  margin-top: 0;\n}\n\n.nc-bar .tc-page-controls button {\n  margin-right: .8em;\n}\n\n.nc-bar .tc-block-dropdown {\n  max-height: 70vh;\n  overflow: auto;\n}\n\n@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .nc-topbar {\n    display: none;\n  }\n\n  .tc-story-river {\n    padding: 0 !important;\n    margin-top: 0;\n  }\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .nc-bottombar {\n    display: none;\n  }\n}\n\n/* Sidebar */\n\n.nc-sidebar {\n  background: #f7f7f7;\n  border-right: 1px solid &lt;&lt;colour tiddler-border&gt;&gt;;\n  width: {{$:/plugins/mario/nico-notebook/metrics/sidebar-width}};\n  overflow-y: auto;\n  overflow-x: hidden;\n  text-overflow: ellipsis;\n}\n\n.nc-sidebar .segment {\n  border-bottom: 1px solid #eee;\n}\n\n.nc-sidebar a {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.nc-sidebar ol {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  line-height: 1.8em;\n}\n\n.nc-sidebar ol ol {\n  padding-left: 18px;\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .nc-sidebar .mobile-only {\n    display: none;\n  }\n}\n\n.nc-sidebar h1.tc-site-title {\n  margin: 0;\n}\n\n.nc-sidebar p {\n  margin: 2px 0;\n}\n\n.nc-sidebar .tc-site-subtitle {\n  color: &lt;&lt;colour site-title-foreground&gt;&gt;;\n}\n\n.nc-sidebar .section .label {\n  padding: 2px 0;\n  color: #777777;\n  fill: #777777;\n  font-weight: bold;\n  line-height: 1.6em;\n  display: block;\n  width: 100%;\n  text-align: left;\n  padding: 5px 10px;\n}\n\n.nc-sidebar .section.open .label {\n  background: white;\n  border-bottom: 1px solid #eee;\n}\n\n.nc-sidebar .section .label .caret {\n  display: inline-block;\n  width: 15px;\n  float: right;\n}\n\n.nc-sidebar .content {\n  padding: 6px 15px;\n  font-size: .95em;\n}\n\n.nc-sidebar .tc-tiddlylink {\n  color: #7f2da4;\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .nc-sidebar {\n    position: fixed;\n    left: 0;\n    top: {{$:/plugins/mario/nico-notebook/metrics/topbar-height}};\n    bottom: 0;\n  }\n}\n\n&lt;&lt;if-sidebar \&quot;\&quot;\&quot;\n@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .nc-sidebar {\n    overflow: auto;\n    position: fixed;\n    left: 0;\n    top: 0;\n    bottom: 48px;\n    z-index: 3000;\n  }\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .tc-story-river {\n    margin-left: {{$:/plugins/mario/nico-notebook/metrics/sidebar-width}} !important;\n  }\n}\n\&quot;\&quot;\&quot;&gt;&gt;\n\n/* Animate the hamburger button */\n\n@keyframes menu-bars-1 {\n  0%   {}\n  100% {\n    transform: rotate(-45deg) translateY(-10px) translateX(-6px);\n    fill: #3B3B41;\n  }\n}\n\n@keyframes menu-bars-2 {\n  0%   {}\n  100% { opacity: 0; }\n}\n\n@keyframes menu-bars-3 {\n  0%   {}\n  100% {\n    transform: rotate(45deg) translateY(6px) translateX(2px);\n    fill: #3B3B41;\n  }\n}\n\n.nc-bar .bars .bar {\n    transform: rotate(0) translateY(0) translateX(0);\n    opacity: 1;\n    transform-origin: 20px 10px;\n    transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out, fill .4s ease-in-out;\n}\n\n.nc-bar .bars .bar:nth-of-type(3) {\n    transform-origin: 20px 20px;\n}\n\n.nc-bar button.open .bars .bar:nth-of-type(1) {\n  animation: menu-bars-1 .4s;\n  animation-fill-mode: forwards;\n}\n.nc-bar button.open .bars .bar:nth-of-type(2) {\n  animation: menu-bars-2 .4s;\n  animation-fill-mode: forwards;\n}\n.nc-bar button.open .bars .bar:nth-of-type(3) {\n  animation: menu-bars-3 .4s;\n  animation-fill-mode: forwards;\n}\n\ndiv.tc-tiddler-frame {\n  padding: 48px;\n  max-width: 768px;\n  margin: 0 auto;\n}\n\n@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  div.tc-tiddler-frame {\n    padding: 14px;\n  }\n}\n\n@media screen {\n  .tc-tiddler-frame {\n    border-top: 0 !important;\n    border-left: 0 !important;\n    border-right: 0 !important;\n    border-radius: 0 !important;\n    margin-bottom: 0 !important;\n  }\n}\n\n/* Inputs &amp; fonts */\n\nhr {\n  border: 3px solid &lt;&lt;colour tiddler-title-foreground&gt;&gt;;\n  border-bottom: 0;\n  margin: 40px 0 30px 0;  \n}\n\ninput {\n  transition: box-shadow 0.15s ease-in-out;\n  border: 1px solid #d9d9d9;\n  padding: 0.3em;\n  border-radius: 4px;\n}\n\ninput:focus {\n  border-color: #aaa;\n}\n\n.tc-titlebar h2, .tc-site-title {\n  font-size: 28px !important;\n  line-height: 34px !important;\n  font-weight: 600 !important;\n  letter-spacing: -0.5px !important;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  color: &lt;&lt;colour tiddler-title-foreground&gt;&gt;\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n  .tc-tiddler-frame .tc-tiddler-controls svg {\n    fill: transparent;\n    transition: all .2s ease-in;\n  }\n  \n  .tc-tiddler-controls svg.tc-image-close-button, \n  .tc-tiddler-controls svg.tc-image-done-button,\n  .tc-tiddler-frame .tc-tiddler-controls:hover svg {\n    fill: #cccccc;\n  }\n}\n\n.tc-tiddler-body h1,\n.tc-tiddler-body h2,\n.tc-tiddler-preview-preview h1,\n.tc-tiddler-preview-preview h2 {\n  font-weight: bold;\n}\n\nbutton:active, button:focus {\n  outline: none;\n}\n\nbutton.tc-tag-label, span.tc-tag-label {\n  padding: 0.3em 1em !important;\n}\n\n.nc-refs {\n  color: #888;\n  font-size: .9em;\n}\n\n.nc-refs h4 {\n  font-weight: bold;\n  margin-bottom: 4px;\n}\n\n.nc-post-created {\n  color: #acacac;\n  font-size: .8em;\n}\n&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/base&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;modified&quot;: &quot;20200430141334475&quot;,
+            &quot;bag&quot;: &quot;default&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/images/bars&quot;: {
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;bars\&quot; height=\&quot;21pt\&quot; viewBox=\&quot;0 0 42 42\&quot; enable-background=\&quot;new 0 0 32 22.5\&quot; version=\&quot;1.1\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;&gt;\n  &lt;g class=\&quot;svg-menu-toggle\&quot; sketch:type=\&quot;MSLayerGroup\&quot;&gt;\n    &lt;rect class=\&quot;bar\&quot; x=\&quot;8\&quot; y=\&quot;28\&quot; width=\&quot;26\&quot; height=\&quot;4\&quot;&gt;&lt;/rect&gt;\n    &lt;rect class=\&quot;bar\&quot; x=\&quot;8\&quot; y=\&quot;19\&quot; width=\&quot;26\&quot; height=\&quot;4\&quot;&gt;&lt;/rect&gt;\n    &lt;rect class=\&quot;bar\&quot; x=\&quot;8\&quot; y=\&quot;10\&quot; width=\&quot;26\&quot; height=\&quot;4\&quot;&gt;&lt;/rect&gt;\n  &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/images/bars&quot;,
+            &quot;modified&quot;: &quot;20200430081243069&quot;,
+            &quot;created&quot;: &quot;20200428212322206&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/images/caret-down&quot;: {
+            &quot;text&quot;: &quot;&lt;svg width=\&quot;6pt\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; viewBox=\&quot;0 0 320 512\&quot;&gt;&lt;path d=\&quot;M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z\&quot;/&gt;&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/images/caret-down&quot;,
+            &quot;modified&quot;: &quot;20200430081300350&quot;,
+            &quot;created&quot;: &quot;20200429194348688&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/images/caret-right&quot;: {
+            &quot;text&quot;: &quot;&lt;svg width=\&quot;4pt\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; viewBox=\&quot;0 0 192 512\&quot;&gt;&lt;path d=\&quot;M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z\&quot;/&gt;&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/images/caret-right&quot;,
+            &quot;modified&quot;: &quot;20200430081309070&quot;,
+            &quot;created&quot;: &quot;20200429194305719&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/metrics/sidebar-width&quot;: {
+            &quot;text&quot;: &quot;350px&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/metrics/sidebar-width&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200430081517072&quot;,
+            &quot;created&quot;: &quot;20200429144554294&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/metrics/topbar-height&quot;: {
+            &quot;text&quot;: &quot;48px&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/metrics/topbar-height&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200430081509176&quot;,
+            &quot;created&quot;: &quot;20200428203454207&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/palette&quot;: {
+            &quot;created&quot;: &quot;20200422134229153&quot;,
+            &quot;text&quot;: &quot;alert-background: #ffe476\nalert-border: #b99e2f\nalert-highlight: #881122\nalert-muted-foreground: #b99e2f\nbackground: #ffffff\nblockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;\nbutton-background:\nbutton-foreground:\nbutton-border:\ncode-background: #f7f7f9\ncode-border: #e1e1e8\ncode-foreground: #dd1144\ndirty-indicator: #ff0000\ndownload-background: #66cccc\ndownload-foreground: &lt;&lt;colour background&gt;&gt;\ndragger-background: &lt;&lt;colour foreground&gt;&gt;\ndragger-foreground: &lt;&lt;colour background&gt;&gt;\ndropdown-background: &lt;&lt;colour background&gt;&gt;\ndropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;\ndropdown-tab-background-selected: #fff\ndropdown-tab-background: #ececec\ndropzone-background: rgba(0,200,0,0.7)\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: #0000aa\nexternal-link-foreground: #0000ee\nforeground: #283c46\nmessage-background: #ecf2ff\nmessage-border: #cfd6e6\nmessage-foreground: #547599\nmodal-backdrop: &lt;&lt;colour foreground&gt;&gt;\nmodal-background: &lt;&lt;colour background&gt;&gt;\nmodal-border: #999999\nmodal-footer-background: #f5f5f5\nmodal-footer-border: #dddddd\nmodal-header-border: #eeeeee\nmuted-foreground: #999999\nnotification-background: #ffffdd\nnotification-border: #999999\npage-background: #f4f4f4\npre-background: #f6f6f6\npre-border: #cccccc\nprimary: #3077cc\nprimary-old: #009fff\nselect-tag-background:\nselect-tag-foreground:\nsidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-controls-foreground-hover: #000000\nsidebar-controls-foreground: #aaa\nsidebar-foreground-shadow: rgba(255,255,255, 0.8)\nsidebar-foreground: #acacac\nsidebar-muted-foreground-hover: #444444\nsidebar-muted-foreground: #c0c0c0\nsidebar-tab-background-selected: #ffffff\nsidebar-tab-background: &lt;&lt;colour tab-background&gt;&gt;\nsidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;\nsidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;\nsidebar-tab-divider: &lt;&lt;colour tab-divider&gt;&gt;\nsidebar-tab-foreground-selected: \nsidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;\nsidebar-tiddler-link-foreground-hover: white\nsidebar-tiddler-link-foreground: &lt;&lt;colour tab-foreground&gt;&gt;\nsite-title-foreground: #777777\nstatic-alert-foreground: #aaaaaa\ntab-background-selected: #ffffff\ntab-background: #eeeeee\ntab-border-selected: #cccccc\ntab-border: #cccccc\ntab-divider: #d8d8d8\ntab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;\ntab-foreground: #666666\ntable-border: #dddddd\ntable-footer-background: #a8a8a8\ntable-header-background: #f0f0f0\ntag-background: #ffeedd\ntag-foreground: #000\ntiddler-background: &lt;&lt;colour background&gt;&gt;\ntiddler-border: #ddd\ntiddler-controls-foreground-hover: #888888\ntiddler-controls-foreground-selected: #444444\ntiddler-controls-foreground: #cccccc\ntiddler-editor-background: #f8f8f8\ntiddler-editor-border-image: #ffffff\ntiddler-editor-border: #cccccc\ntiddler-editor-fields-even: #e0e8e0\ntiddler-editor-fields-odd: #f0f4f0\ntiddler-info-background: #f8f8f8\ntiddler-info-border: #dddddd\ntiddler-info-tab-background: #f8f8f8\ntiddler-link-background: &lt;&lt;colour background&gt;&gt;\ntiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;\ntiddler-subtitle-foreground: #c0c0c0\ntiddler-title-foreground: #333\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\ntoolbar-info-button:\ntoolbar-edit-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-cancel-button:\ntoolbar-done-button:\nuntagged-background: #999999\nvery-muted-foreground: #888888\n&quot;,
+            &quot;type&quot;: &quot;application/x-tiddler-dictionary&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/palette&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Palette&quot;,
+            &quot;name&quot;: &quot;Notebook&quot;,
+            &quot;modified&quot;: &quot;20200430142942738&quot;,
+            &quot;description&quot;: &quot;A colour paletter that complements the notebook theme&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/Sidebar/More&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/SideBar/More}}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/Sidebar/More&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/SidebarSection&quot;,
+            &quot;modified&quot;: &quot;20200430081455536&quot;,
+            &quot;created&quot;: &quot;20200429200405833&quot;,
+            &quot;caption&quot;: &quot;More&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/Sidebar/Open&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/SideBar/Open}}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/Sidebar/Open&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/SidebarSection&quot;,
+            &quot;modified&quot;: &quot;20200430081444560&quot;,
+            &quot;created&quot;: &quot;20200429195857639&quot;,
+            &quot;caption&quot;: &quot;Open tiddlers&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/Sidebar/Recent&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/SideBar/Recent}}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/Sidebar/Recent&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/SidebarSection&quot;,
+            &quot;modified&quot;: &quot;20200430081436560&quot;,
+            &quot;created&quot;: &quot;20200429200330782&quot;,
+            &quot;caption&quot;: &quot;Recent tiddlers&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/Sidebar/Sections&quot;: {
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[all[shadows+tiddlers]!has[daft.of]tag[$:/plugins/mario/nico-notebook/tags/SidebarSection]]\&quot; &gt;\n  {{||$:/plugins/mario/nico-notebook/ui/Sidebar/SectionTemplate}}\n&lt;/$list&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/Sidebar/Sections&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/Sidebar&quot;,
+            &quot;modified&quot;: &quot;20200430081428800&quot;,
+            &quot;created&quot;: &quot;20200429163239707&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/Sidebar/Tools&quot;: {
+            &quot;text&quot;: &quot;{{$:/core/ui/SideBar/Tools}}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/Sidebar/Tools&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/SidebarSection&quot;,
+            &quot;modified&quot;: &quot;20200430081420840&quot;,
+            &quot;created&quot;: &quot;20200429163120272&quot;,
+            &quot;caption&quot;: &quot;Tools&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/tags/Sidebar&quot;: {
+            &quot;created&quot;: &quot;20200429164516951&quot;,
+            &quot;text&quot;: &quot;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/tags/Sidebar&quot;,
+            &quot;modified&quot;: &quot;20200430081805133&quot;,
+            &quot;list&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/Headings $:/plugins/mario/nico-notebook/ui/Sidebar/Search $:/plugins/mario/nico-notebook/Sidebar/Sections&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/tags/SidebarSection&quot;: {
+            &quot;created&quot;: &quot;20200429201017275&quot;,
+            &quot;text&quot;: &quot;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/tags/SidebarSection&quot;,
+            &quot;modified&quot;: &quot;20200430081719095&quot;,
+            &quot;list&quot;: &quot;$:/plugins/mario/nico-notebook/Sidebar/Open $:/plugins/mario/nico-notebook/Sidebar/Recent $:/plugins/mario/nico-notebook/Sidebar/Tools $:/plugins/mario/nico-notebook/Sidebar/More&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Bottombar&quot;: {
+            &quot;text&quot;: &quot;&lt;$reveal state=\&quot;$:/state/notebook-bottombar\&quot; type=\&quot;match\&quot; text=\&quot;yes\&quot; default=\&quot;yes\&quot; retain=\&quot;yes\&quot; animate=\&quot;yes\&quot;&gt;\n  &lt;div class=\&quot;nc-bar nc-bottombar\&quot;&gt;\n    &lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/tags/NotebookTopbar]!has[draft.of]]\&quot; variable=\&quot;listItem\&quot;&gt;\n      &lt;$reveal type=\&quot;nomatch\&quot; state=&lt;&lt;config-title&gt;&gt; text=\&quot;hide\&quot;  tag=\&quot;div\&quot;&gt;\n        &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; mode=\&quot;block\&quot;/&gt;\n      &lt;/$reveal&gt;\n    &lt;/$list&gt;\n    &lt;div class=\&quot;left\&quot;&gt;\n      {{$:/plugins/mario/nico-notebook/ui/Buttons/menu}}\n    &lt;/div&gt;\n    &lt;div class=\&quot;right\&quot;&gt;\n      {{$:/core/ui/SideBarSegments/page-controls}}\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/$reveal&gt;\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Bottombar&quot;,
+            &quot;tags&quot;: &quot;$:/tags/PageTemplate&quot;,
+            &quot;modified&quot;: &quot;20200430081406215&quot;,
+            &quot;created&quot;: &quot;20200429113453340&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Buttons/menu&quot;: {
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[[$:/state/notebook-sidebar]get[text]] +[else[yes]!match[no]]\&quot; variable=\&quot;ignore\&quot;&gt;\n  &lt;$button set=\&quot;$:/state/notebook-sidebar\&quot; setTo=\&quot;no\&quot; tooltip=\&quot;Toggle menu\&quot; class=\&quot;tc-btn-invisible open\&quot;&gt;\n    {{$:/plugins/mario/nico-notebook/images/bars}}\n  &lt;/$button&gt;\n&lt;/$list&gt;\n\n&lt;$list filter=\&quot;[[$:/state/notebook-sidebar]get[text]] +[else[yes]match[no]]\&quot; variable=\&quot;ignore\&quot;&gt;\n  &lt;$button set=\&quot;$:/state/notebook-sidebar\&quot; setTo=\&quot;yes\&quot; tooltip=\&quot;Toggle menu\&quot; class=\&quot;tc-btn-invisible\&quot;&gt;\n    {{$:/plugins/mario/nico-notebook/images/bars}}\n  &lt;/$button&gt;\n&lt;/$list&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Buttons/menu&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200430081356447&quot;,
+            &quot;created&quot;: &quot;20200429115248943&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Sidebar&quot;: {
+            &quot;created&quot;: &quot;20200428201218885&quot;,
+            &quot;text&quot;: &quot;\\whitespace trim\n\\define config-title()\n$:/config/SideBarSegments/Visibility/$(listItem)$\n\\end\n\n&lt;$reveal state=\&quot;$:/state/notebook-sidebar\&quot; type=\&quot;match\&quot; text=\&quot;yes\&quot; default=\&quot;yes\&quot; retain=\&quot;yes\&quot; animate=\&quot;no\&quot;&gt;\n    &lt;$scrollable fallthrough=\&quot;no\&quot;&gt;\n    &lt;div class=\&quot;nc-sidebar\&quot;&gt;\n      &lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/plugins/mario/nico-notebook/tags/Sidebar]!has[draft.of]]\&quot; variable=\&quot;listItem\&quot;&gt;\n        &lt;$reveal type=\&quot;nomatch\&quot; state=&lt;&lt;config-title&gt;&gt; text=\&quot;hide\&quot;  tag=\&quot;div\&quot;&gt;\n          &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; mode=\&quot;inline\&quot;/&gt;\n        &lt;/$reveal&gt;\n      &lt;/$list&gt;\n    &lt;/div&gt;\n    &lt;/$scrollable&gt;\n&lt;/$reveal&gt;\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Sidebar&quot;,
+            &quot;tags&quot;: &quot;$:/tags/PageTemplate&quot;,
+            &quot;modified&quot;: &quot;20200430120910774&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/Headings&quot;: {
+            &quot;text&quot;: &quot;&lt;div class=\&quot;segment\&quot;&gt;\n  &lt;div class=\&quot;content\&quot;&gt;\n    &lt;h1 class=\&quot;tc-site-title\&quot;&gt;\n      {{$:/SiteTitle}}\n    &lt;/h1&gt;\n    &lt;div class=\&quot;tc-site-subtitle\&quot;&gt;\n      {{$:/SiteSubtitle}}\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/Headings&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/Sidebar&quot;,
+            &quot;modified&quot;: &quot;20200430125446151&quot;,
+            &quot;created&quot;: &quot;20200429160014174&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/Search&quot;: {
+            &quot;created&quot;: &quot;20200429191943257&quot;,
+            &quot;text&quot;: &quot;&lt;$set name=\&quot;searchTiddler\&quot; value=\&quot;$:/temp/notebook-search\&quot;&gt;\n\n&lt;div class=\&quot;segment mobile-only\&quot;&gt;\n  &lt;div class=\&quot;content search\&quot;&gt;\n\n    &lt;$edit-text tiddler=&lt;&lt;searchTiddler&gt;&gt; tag=\&quot;input\&quot; type=\&quot;search\&quot; focusPopup=\&quot;$:/state/popup/notebook-search\&quot; class=\&quot;tc-popup-handle\&quot; placeholder=\&quot;Search...\&quot; default=\&quot;\&quot;/&gt;\n    &lt;$button tooltip={{$:/language/Buttons/AdvancedSearch/Hint}} aria-label={{$:/language/Buttons/AdvancedSearch/Caption}} class=\&quot;tc-btn-invisible tc-page-controls\&quot;&gt;\n      &lt;$action-setfield $tiddler=\&quot;$:/temp/advancedsearch\&quot; text={{$:/temp/notebook-search}}/&gt;\n      &lt;!-- &lt;$action-setfield $tiddler=&lt;&lt;searchTiddler&gt;&gt; text=\&quot;\&quot;/&gt; --&gt;\n      &lt;$action-navigate $to=\&quot;$:/AdvancedSearch\&quot;/&gt;\n      {{$:/core/images/advanced-search-button}}\n    &lt;/$button&gt;\n\n    &lt;$reveal tag=\&quot;div\&quot; class=\&quot;tc-block-dropdown-wrapper\&quot; state=\&quot;$:/state/popup/notebook-search\&quot; type=\&quot;nomatch\&quot; text=\&quot;\&quot; default=\&quot;\&quot;&gt;\n      &lt;$list filter=\&quot;[&lt;searchTiddler&gt;get[text]minlength{$:/config/Search/MinLength}limit[1]]\&quot; emptyMessage=\&quot;\&quot; variable=\&quot;listItem\&quot;&gt;\n        &lt;div class=\&quot;tc-block-dropdown tc-search-drop-down\&quot;&gt;\n          {{$:/core/ui/SearchResults}}\n        &lt;/div&gt;\n      &lt;/$list&gt;\n    &lt;/$reveal&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;/$set&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/Search&quot;,
+            &quot;tags&quot;: &quot;$:/plugins/mario/nico-notebook/tags/Sidebar&quot;,
+            &quot;modified&quot;: &quot;20200430143020140&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/SectionTemplate&quot;: {
+            &quot;text&quot;: &quot;&lt;$reveal state=\&quot;$:/state/notebook-sidebar-section\&quot; type=\&quot;match\&quot; text=&lt;&lt;currentTiddler&gt;&gt; default=\&quot;no\&quot; animate=\&quot;no\&quot;&gt;\n  &lt;div class=\&quot;segment section open\&quot;&gt;\n    &lt;$button set=\&quot;$:/state/notebook-sidebar-section\&quot; setTo=\&quot;\&quot; class=\&quot;tc-btn-invisible label\&quot;&gt;\n      &lt;$view field=\&quot;caption\&quot;/&gt;\n      &lt;span class=\&quot;caret\&quot;&gt;{{$:/plugins/mario/nico-notebook/images/caret-down}}&lt;/span&gt;\n    &lt;/$button&gt;\n    &lt;div class=\&quot;content\&quot;&gt;\n      {{!!text}}\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;$reveal state=\&quot;$:/state/notebook-sidebar-section\&quot; type=\&quot;nomatch\&quot; text=&lt;&lt;currentTiddler&gt;&gt; default=\&quot;yes\&quot; animate=\&quot;no\&quot;&gt;\n  &lt;div class=\&quot;segment section\&quot;&gt;\n    &lt;$button set=\&quot;$:/state/notebook-sidebar-section\&quot; setTo=&lt;&lt;currentTiddler&gt;&gt; class=\&quot;tc-btn-invisible label\&quot;&gt;\n      &lt;$view field=\&quot;caption\&quot;/&gt;\n      &lt;span class=\&quot;caret\&quot;&gt;{{$:/plugins/mario/nico-notebook/images/caret-right}}&lt;/span&gt;\n    &lt;/$button&gt;\n  &lt;/div&gt;\n&lt;/$reveal&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Sidebar/SectionTemplate&quot;,
+            &quot;modified&quot;: &quot;20200430125148040&quot;,
+            &quot;created&quot;: &quot;20200429161226897&quot;
+        },
+        &quot;$:/plugins/mario/nico-notebook/ui/Topbar&quot;: {
+            &quot;text&quot;: &quot;&lt;$reveal state=\&quot;$:/state/notebook-topbar\&quot; type=\&quot;match\&quot; text=\&quot;yes\&quot; default=\&quot;yes\&quot; retain=\&quot;yes\&quot; animate=\&quot;yes\&quot;&gt;\n  &lt;div class=\&quot;nc-bar nc-topbar\&quot;&gt;\n    &lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/tags/NotebookTopbar]!has[draft.of]]\&quot; variable=\&quot;listItem\&quot;&gt;\n      &lt;$reveal type=\&quot;nomatch\&quot; state=&lt;&lt;config-title&gt;&gt; text=\&quot;hide\&quot;  tag=\&quot;div\&quot;&gt;\n        &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; mode=\&quot;block\&quot;/&gt;\n      &lt;/$reveal&gt;\n    &lt;/$list&gt;\n    &lt;div class=\&quot;left\&quot;&gt;\n      {{$:/plugins/mario/nico-notebook/ui/Buttons/menu}}\n    &lt;/div&gt;\n    &lt;div class=\&quot;center\&quot;&gt;\n      &lt;!-- &lt;input type=\&quot;search\&quot; placeholder=\&quot;Search...\&quot;/&gt; --&gt;\n      {{$:/plugins/mario/nico-notebook/ui/Sidebar/Search}}\n    &lt;/div&gt;\n    &lt;div class=\&quot;right\&quot;&gt;\n      {{$:/core/ui/SideBarSegments/page-controls}}\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/$reveal&gt;\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/mario/nico-notebook/ui/Topbar&quot;,
+            &quot;tags&quot;: &quot;$:/tags/PageTemplate&quot;,
+            &quot;modified&quot;: &quot;20200430140745651&quot;,
+            &quot;created&quot;: &quot;20200428203101797&quot;
+        },
+        &quot;$:/state/notebook-sidebar&quot;: {
+            &quot;created&quot;: &quot;20200429142736872&quot;,
+            &quot;text&quot;: &quot;no&quot;,
+            &quot;title&quot;: &quot;$:/state/notebook-sidebar&quot;,
+            &quot;modified&quot;: &quot;20200430154840383&quot;
+        },
+        &quot;$:/state/notebook-sidebar-section&quot;: {
+            &quot;created&quot;: &quot;20200429194630535&quot;,
+            &quot;text&quot;: &quot;$:/plugins/nico/pm/NotebookSidebar/Projects&quot;,
+            &quot;title&quot;: &quot;$:/state/notebook-sidebar-section&quot;,
+            &quot;modified&quot;: &quot;20200430151311688&quot;
+        }
+    }
+}</pre>
 </div>
 <div author="Nicolas Petton" bag="default" core-version="&gt;=5.0.0" created="20200419141233574" dependents="$:/themes/tiddlywiki/vanilla" description="A clean, uncluttered theme" modified="20200430132117748" name="Notebook" plugin-priority="0" plugin-type="theme" revision="0" tags="" title="$:/plugins/nico/notebook" type="application/json" version="0.2.23">
 <pre>{
@@ -10498,7 +10685,7 @@ html body.tc-body {
 <pre>no</pre>
 </div>
 <div created="20200429194630535" modified="20200916004522065" title="$:/state/notebook-sidebar-section">
-<pre>$:/plugins/nico/notebook/Sidebar/Recent</pre>
+<pre>$:/plugins/nico/notebook/Sidebar/Tools</pre>
 </div>
 <div created="20200915123144755" modified="20200915123144755" title="$:/state/plugin-info--167012066-$:/themes/jd/Whitespace">
 <pre>no</pre>
@@ -10528,7 +10715,7 @@ html body.tc-body {
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200608235207575" modified="20200915122430263" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<pre>$:/core/ui/ControlPanel/Theme</pre>
 </div>
 <div created="20200609170658739" modified="20200831020505213" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -10620,11 +10807,11 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1024&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;800&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -11593,7 +11780,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <pre>loaded</pre>
 </div>
 <div created="20180826061648522" creator="jd" modified="20200831020449050" modifier="jd" title="$:/theme">
-<pre>$:/plugins/nico/notebook</pre>
+<pre>$:/plugins/mario/nico-notebook</pre>
 </div>
 <div created="20190202114537700" creator="jd" list="$:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/save-wiki $:/themes/jd/Mono/Buttons/switch-palette $:/core/ui/TopBar/menu $:/themes/jd/Mono/Buttons/searchbar" modified="20200608235212208" modifier="jd" tags="" title="$:/themes/jd/Mono/Database" type="application/json">
 <pre>{
