@@ -10686,7 +10686,11 @@ div.tc-tiddler-frame {
   margin: 0 auto;
   margin-top: 16px;
   box-shadow: 0 2px 12px #0001;
-  border-radius: 6px;
+  border-radius: 6px; 
+  padding: 0 32px;
+}
+div.tc-tiddler-frame:first-of-type {
+  margin-top: 64px;
 }
 
 @media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
