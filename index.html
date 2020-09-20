@@ -10731,6 +10731,10 @@ input:focus {
   border-color: #aaa;
 }
 
+.tc-titlebar h2, .tc-site-title {
+  font-size: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
 }
@@ -10748,11 +10752,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.tc-subtitle {
+  opacity: .1;
+}
+
+.tc-subtitle:hover {
+  opacity: 1;
+}
+
 .tc-tiddler-body h1,
 .tc-tiddler-body h2,
 .tc-tiddler-preview-preview h1,
 .tc-tiddler-preview-preview h2 {
   font-weight: bold;
+}
+
+.tc-tiddler-body p {
+    line-height: 1.4rem;
 }
 
 pre, code {
