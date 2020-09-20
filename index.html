@@ -10764,6 +10764,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+pre, code {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 button:active, button:focus {
   outline: none;
 }
@@ -10953,7 +10961,7 @@ html body.tc-body {
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20200608235207575" modified="20200915122430263" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Theme</pre>
+<pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
 <div created="20200609170658739" modified="20200831020505213" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -10968,7 +10976,7 @@ html body.tc-body {
 <pre>$:/core/ui/ControlPanel/EditorTypes</pre>
 </div>
 <div created="20200608234001932" modified="20200915123101177" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20200609004741424" modified="20200831020559380" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -10991,7 +10999,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="$:/ControlPanel colophon" title="$:/StoryList">
+<div list="colophon" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200608235839584" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/Open $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608235847368" title="$:/tags/SideBar">
