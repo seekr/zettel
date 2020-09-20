@@ -10515,12 +10515,16 @@ h1.tc-site-title {
   .tc-story-river {
     padding: 0 !important;
     margin-top: 0;
+    margin-bottom: 64px;
   }
 }
 
 @media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
   .nc-bottombar {
     display: none;
+  }
+  .tc-story-river {
+    margin-top: 64px;
   }
 }
 
@@ -10689,16 +10693,10 @@ div.tc-tiddler-frame {
   border-radius: 6px; 
   padding: 16px 32px;
 }
-div.tc-tiddler-frame:first-of-type {
-  margin-top: 64px;
-}
 
 @media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
   div.tc-tiddler-frame {
     padding: 16px;
-  }
-  div.tc-tiddler-frame:first-of-type {
-    margin-top: 0px;
   }
   div.tc-tiddler-frame:last-of-type {
       padding-bottom: 64px;
