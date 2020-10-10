@@ -695,6 +695,8 @@ Error message and password prompt
 
 <li>html magic</li>
 
+<li>i3wm</li>
+
 <li>journal</li>
 
 <li>jsless modals</li>
@@ -11038,7 +11040,7 @@ html body.tc-body {
 <div created="20200608235211598" modified="20200608235212208" title="$:/state/searchbar">
 <pre>show</pre>
 </div>
-<div created="20200613195809218" modified="20201009185843336" title="$:/state/showeditpreview">
+<div created="20200613195809218" modified="20201010141024036" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div created="20200608233949153" modified="20200609002847993" title="$:/state/sidebar">
@@ -11140,11 +11142,11 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1600&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -15320,6 +15322,38 @@ Below are few magic tricks using pure html and css to replace interactions commo
 &lt;&lt;toc &quot;htmlmagic&quot;&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
+<div created="20201010140857142" modified="20201010141607081" title="i3wm">
+<pre>I installed i3 over an existing [[elementary os]] installation using:
+
+```
+apt install i3
+```
+
+On first run, I noticed screen tear/glitches while scroll on firefox in i3, and googling around I [[learned that i3 needs a compositor|https://askubuntu.com/questions/751149/screen-tearing-when-using-i3-none-when-using-unity/751281#751281]] (such as compton) to fix this issues:
+
+
+```
+apt install compton
+touch ~/.config/compton.conf
+```
+
+Adjust compton.conf to your needs and stat compton:
+
+
+```
+compton --config ~/.config/compton.conf -b
+```
+
+If all is working as expected run this line to make compton start automatically when i3 starts:
+
+
+```
+exec --no-startup-id compton --config ~/.config/compton.conf -b
+```
+
+
+</pre>
+</div>
 <div color="#00ffff" created="20200617042122584" modified="20200617042432433" title="journal">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 &lt;&lt;toc &quot;journal&quot;&gt;&gt;
@@ -15482,7 +15516,7 @@ Probably will want to [[setup a subdomain]] along with [[caddy proxy]].</pre>
   &lt;rect x='0' y='0' width='1' height='1' fill='black' /&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20200610142722716" modified="20200829201425781" title="Thinkpad T430">
+<div created="20200610142722716" modified="20201010140455525" title="Thinkpad T430">
 <pre>```
 user@t430:~/$ screenfetch
 
@@ -15511,6 +15545,7 @@ eee    eeeeeeeeee     eeeeee    eee  Font: Inter 9
 
 * [[power management]]
 * [[my own crontab]]
+* [[i3wm]]
 </pre>
 </div>
 <div created="20200920163112432" modified="20201008183547629" tags="" title="this tiddlywiki">
