@@ -11092,7 +11092,7 @@ html body.tc-body {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201022190413568" list="[[running a Calibre server]] colophon [[create systemd service]] [[adding new book from command line]]" modified="20201022191542066" title="$:/StoryList">
+<div list="colophon" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200608235839584" list="$:/core/ui/SideBar/Recent $:/core/ui/SideBar/Open $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200608235847368" title="$:/tags/SideBar">
@@ -11162,8 +11162,8 @@ html body.tc-body {
 <div created="20200609205514877" modified="20200924020411111" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20200610144924678" modified="20201022190411615" title="$:/temp/notebook-search">
-<pre>calibre</pre>
+<div created="20200610144924678" modified="20201022192040296" title="$:/temp/notebook-search">
+<pre></pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20200608234105880" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20200608234105880" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" requires-reload="no" server-url="https://tiddlywiki.com/library/v5.1.22/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.22/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.22">
 <pre></pre>
@@ -15098,8 +15098,10 @@ Quando a levei à mãe está deu se conta da temperatura. Não era muito alta. M
 
 Apesar da febre, ela está muito animada. Damos a dose regular de antipirético para dar lhe algum conforto.</pre>
 </div>
-<div created="20201022191556094" modified="20201022191838312" title="adding new book from command line">
-<pre>```
+<div created="20201022191556094" modified="20201022192028079" title="adding new book from command line">
+<pre>If you are running Calibre without GUI (ie. on a linux server) you may need to use the command line to add new books to the library. This is how you would do it.
+
+```
 calibredb add [book-file1] [book-file2] --with-library=~/[library-path]
 ```
 [library-path] is essentially where you can find the `metadata.db` file. If you already have books added to that library, normally you'll find several folders named by the book authors in the same folder where you find `metadata.db`.</pre>
