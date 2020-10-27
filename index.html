@@ -741,6 +741,8 @@ Error message and password prompt
 
 <li>Thinkpad T430</li>
 
+<li>Thinkpad X240</li>
+
 <li>this tiddlywiki</li>
 
 <li>Venue 11 Pro</li>
@@ -11070,11 +11072,11 @@ html body.tc-body {
 <div created="20200609170704645" modified="20200609170716653" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/EditorTypes</pre>
 </div>
-<div created="20200608234001932" modified="20201008183455138" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200608234001932" modified="20201027173001151" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20200609004741424" modified="20200921204205204" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/DownloadSaver</pre>
+<div created="20200609004741424" modified="20201027173002969" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20200609000613288" modified="20200609000613288" title="$:/state/tab-702914072">
 <pre>$:/core/ui/TiddlerInfo/References</pre>
@@ -11148,11 +11150,11 @@ html body.tc-body {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1600&quot;
+            &quot;text&quot;: &quot;1366&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;900&quot;
+            &quot;text&quot;: &quot;768&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -15590,6 +15592,16 @@ eee    eeeeeeeeee     eeeeee    eee  Font: Inter 9
 * [[i3wm]]
 </pre>
 </div>
+<div created="20201027172551751" modified="20201027172853835" title="Thinkpad X240">
+<pre>Fixing touchpad freezing after waking up from suspension:
+
+```
+sudo modprobe -r psmouse
+sudo modprobe psmouse
+```
+
+This will disable then re-enable mouse driver to force wake up the mouse. This can be added to `~/.gnomerc`</pre>
+</div>
 <div created="20200920163112432" modified="20201008183547629" tags="" title="this tiddlywiki">
 <pre>I started this [[tiddlywiki|https://tiddlywiki.com]] from an `empty.html` and I'm progressively learning what I can strip from it to reduce its size.
 
@@ -15631,12 +15643,13 @@ Get boot menu
 sudo ss -pt state listening 'sport = :80'
 ```</pre>
 </div>
-<div created="20200605140640524" modified="20200905050629842" title="workstations">
+<div created="20200605140640524" modified="20201027172523086" title="workstations">
 <pre>In the vein of [[Uses this|https://usesthis.com/]], I'll try to keep a description of what I currently have for my setup.
 
 At work, I have been using macOS while at home I prefer anything but (mix of windows and *nix devices). My latest favourite distro is [[elementary os]].
 
-* [[personal workstation|Thinkpad T430]]:  a  [[pre-owned|buying second hand]] Lenovo Thinkpad T430.
+* [[T430|Thinkpad T430]]:  a  [[pre-owned|buying second hand]] Lenovo Thinkpad T430.
+* [[X240|Thinkpad X240]]: another [[pre-owned|buying second hand]] device I picked for its size and I will need to replace the keyboard.
 * [[personal tablet|Venue 11 Pro]]: a Dell Venue 11 Pro.
 * [[media center|Raspberry Pi 4]]: a 4GB Raspberry Pi 4 running [[LibreELEC]].
 * [[work workstation]]: a touch bar o_Ô ~MacBookPro14,3 running latest corporate macOS image.
